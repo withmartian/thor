@@ -18,8 +18,8 @@ agents agency — and require them to *disagree* with me when they should.
 
 Left alone, an agent's default is to be agreeable. It will happily spend days,
 and a lot of tokens, chasing a path I suggested even when my idea is wrong. So I
-keep my beliefs and the agent's beliefs in separate "on the record" files, and I
-choose experiments that discriminate between them. Then I use fresh "skeptic"
+keep my beliefs and the agent's beliefs in separate "on the record" files, and we
+choose experiments that discriminate between them. Then we use fresh "skeptic"
 agents as a third party to keep us both honest. It is cheap insurance that
 raises quality.
 

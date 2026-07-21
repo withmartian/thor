@@ -1,69 +1,38 @@
 # thor — X thread
 
-*Draft thread for launch on X. Companion to the [long-form write-up](blog.md) and
-the [LinkedIn teaser](linkedin.md). Swap `github.com/withmartian/thor` for the
-final URL before posting.*
+*Draft teaser thread for launch on X. Companion to the
+[long-form write-up](blog.md) and the [LinkedIn teaser](linkedin.md). Its only
+jobs are to pitch the collaborative approach and earn the click — it does not try
+to explain the method. Swap `github.com/withmartian/thor` for the final URL
+before posting.*
 
 ---
 
 **1/**
-This past quarter, using AI agents as research assistants, I roughly tripled my
-research throughput — and quality went *up*, not down.
+This past quarter, AI agents roughly tripled my research throughput — and the
+quality went *up*.
 
-Here's how I do it: a thread on doing great research with agents that disagree
-with you. 🧵
+Not from one clever prompt. From months of real collaboration: agents running
+hundreds of experiments alongside me, like colleagues who push back. 🧵
 
 **2/**
-Research is a harder place for agents than coding. In software you can write a
-test for "done." In research there's no oracle — my first guesses are usually
-wrong and nothing tells me so.
+The shift: I stopped treating agents as oracles, and started treating them as
+peers — ones expected to *disagree* with me.
 
-So the real risk isn't buggy code. It's over-believing my own hypothesis.
+Neither of us is right on our own. But a human and agents who productively
+disagree, week after week, get closer to the truth than either could alone.
 
 **3/**
-My fix: *positive disagreement.*
+And it's robust. The project's whole memory lives in plain, version-controlled
+files — not in any one agent's head.
 
-The human and the agent keep their beliefs in **separate** files, and are
-expected to disagree. Then I pick experiments that discriminate between the two —
-not ones that pile confirmation on whoever spoke first.
+So the work survives model swaps, dead sessions, a new laptop, even a new
+collaborator cloning the repo. Hundreds of experiments over months, nothing lost.
 
 **4/**
-Left alone, agents are agreeable. One will happily burn days (and a lot of
-tokens) chasing a path I suggested, even when I'm wrong.
+I've written up the whole practice — and open-sourced the templates — as
+**thor**: Towards Human-Oracle Research.
 
-Writing the disagreement into the contract — *push back, propose alternatives* —
-is what stops that.
+If you run multi-week research with agents, I think it'll level you up too.
 
-**5/**
-The single biggest quality win: **skeptic gates.**
-
-A fresh agent — ideally a different vendor — reviews each experiment twice:
-before launch (is the plan sound?) and after (is the verdict over-claimed?),
-reading only the docs.
-
-Cheap insurance against believing a broken result.
-
-**6/**
-None of this works without the boring part: **write it down.**
-
-All project state lives in version-controlled Markdown. It survives crashes,
-compaction, vendor swaps and reboots — and it makes the whole thing
-model-agnostic. I've run it on Claude, ChatGPT and OpenCode.
-
-**7/**
-And stay a manager, not a bystander.
-
-Agents are brilliant, fast, cheap junior *assistants* — but they lack research
-taste and get tunnel vision. Set direction, review the diff, keep a human in the
-loop.
-
-**8/**
-It travels: 4 of my projects, plus 2 friends on entirely different problems. One
-re-run did 35 experiments in 3 days.
-
-I've open-sourced the whole practice as templates — **thor** (Towards
-Human-Oracle Research):
-
-🔗 github.com/withmartian/thor
-
-I'd love to hear what breaks.
+Full write-up + templates 🔗 github.com/withmartian/thor
