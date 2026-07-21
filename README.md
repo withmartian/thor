@@ -1,5 +1,7 @@
 # thor — Towards Human-Oracle Research
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **A small set of Markdown templates, plus a working practice, for running real
 research with AI agents as semi-independent assistants.**
 
@@ -16,7 +18,7 @@ result. Writing everything down is the substrate that makes this work.
 > research with AI agents that disagree with me* — then clone the
 > [templates](templates/). See thor at work in [four real projects](EXAMPLES.md).
 
-![thor document flow](templates/thor-overview.png)
+![thor document flow](images/thor-overview.png)
 
 ## Why a method at all?
 
@@ -135,10 +137,23 @@ topic name on the per-topic docs), and keep a single shared
 ## Read more
 
 - **Long-form:** [doing great research with AI agents that disagree with me](docs/blog.md)
-- **Short-form:** [LinkedIn teaser](docs/linkedin.md)
+- **Short-form:** [LinkedIn teaser](docs/linkedin.md) · [X thread](docs/x-thread.md)
 - **In practice:** [thor in the wild](EXAMPLES.md) — intent, quanta_maths,
   scaling-laws, Wayfinder
 
+## Status
+
+thor is a snapshot of a live practice, not a finished system — the templates and
+the write-ups keep improving. Treat everything here as a recommended default to
+adapt, not a standard to obey.
+
+## Contributing & contact
+
+Improvements are welcome, and I would especially like to hear what broke when you
+tried it. thor is curated by **Philip Quirke** (Martian); please propose changes
+by getting in touch rather than opening a pull request — see
+[CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
-[MIT](LICENSE). Contributions and reports of what broke are welcome.
+[MIT](LICENSE). Free to copy, adapt, and use.

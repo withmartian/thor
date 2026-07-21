@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use thor, please cite it as below."
+title: "thor — Towards Human-Oracle Research"
+abstract: >-
+  thor (Towards Human-Oracle Research) is a small set of Markdown templates and a
+  working practice for running real, multi-week research with AI agents as
+  semi-independent assistants. Its core idea is positive disagreement: human and
+  agent keep separate, version-controlled belief files, experiments are biased
+  toward ones that settle the disagreement, and a fresh skeptic agent reviews every
+  plan and result.
+type: software
+authors:
+  - given-names: Philip
+    family-names: Quirke
+    affiliation: Martian
+    email: philip@withmartian.com
+url: "https://github.com/withmartian/thor"
+repository-code: "https://github.com/withmartian/thor"
+license: MIT
+version: "0.1.0"
+date-released: "2026-07-21"
+keywords:
+  - AI agents
+  - research methodology
+  - human-AI collaboration
+  - interpretability
+  - agentic research
