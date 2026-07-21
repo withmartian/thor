@@ -13,7 +13,7 @@ This past quarter, AI agents roughly tripled my research throughput — and the
 quality went *up*.
 
 Not from one clever prompt. From months of real collaboration: agents running
-hundreds of experiments alongside me, like colleagues who push back. 🧵
+hundreds of experiments alongside me, like opinionated colleagues. 🧵
 
 **2/**
 Most people picture research like software: you know what "done" looks like
@@ -40,6 +40,7 @@ collaborator cloning the repo. Hundreds of experiments over months, nothing lost
 I've written up the whole practice — and open-sourced the templates — as
 **thor**: Towards Human-Oracle Research.
 
-If you run multi-week research with agents, I think it'll level you up too.
+If you run open-ended, multi-week research with agents, I think it'll level you
+up too.
 
 Full write-up + templates 🔗 github.com/withmartian/thor
