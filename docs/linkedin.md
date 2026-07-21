@@ -13,8 +13,13 @@ back.
 
 But I need to learn to use these power tools safely.
 
-In research, the key risk is over-belief in your own hypothesis. So I give my
-agents agency — and require them to *disagree* with me when they should.
+My kind of research has no blueprint. I start with an area, a direction, and a
+few clues — but the destination is unknown, and my first hypothesis is probably
+wrong. Unlike software, there is no test for "done"; nothing even tells me when I
+am getting closer.
+
+So the real risk is over-belief in that hypothesis — mine or the agent's. I give
+my agents agency, and require them to *disagree* with me when they should.
 
 Left alone, an agent's default is to be agreeable. It will happily spend days,
 and a lot of tokens, chasing a path I suggested even when my idea is wrong. So I

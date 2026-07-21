@@ -17,12 +17,14 @@ Each month, as the models get more capable and I get better at directing them,
 the benefits increase. I do not want to do research without them again.
 
 Research is a harder place to use agents than software engineering. In software,
-the goal is usually clear and you can write a test for "done." In research, the
-truth may not be known until the end. A project has a starting point and a
-direction, but my initial guesses about the endpoint are often wrong — and there
-is no oracle to tell me whether today moved me closer.
+the goal is usually clear and you can write a test for "done." My kind of
+research has no such test. I start with an area, a direction, and a few clues —
+but the destination is unknown, and the best I have is a starting hypothesis that
+is probably wrong. There is no oracle to tell me whether today moved me closer.
 
-So I need a process that does three things:
+The central danger, then, is not bad code. It is over-belief in a hypothesis —
+mine or the agent's — that goes unchallenged for weeks. To manage that, I need a
+process that does three things:
 
 - maximizes progress and minimizes time lost down dead ends;
 - keeps agents from hallucinating, or simply agreeing with me to be pleasant;
