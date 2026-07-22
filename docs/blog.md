@@ -223,5 +223,5 @@ keep improving. If you try them, I would like to hear what broke.
 
 ---
 
-**Get the templates:** [github.com/withmartian/thor](../README.md) · Walkthroughs
-on real projects coming.
+**Get the templates:** [github.com/withmartian/thor](https://github.com/withmartian/thor)
+· Walkthroughs on real projects coming.

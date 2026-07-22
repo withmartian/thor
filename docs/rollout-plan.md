@@ -136,8 +136,12 @@ Start by reading `docs/thor-agent.md`.
 
 ## Part 3 — After the rollout
 
-- Update the placeholder in `docs/linkedin.md` (`[LINK]`) and the closing link in
-  `docs/blog.md` with the public `withmartian/thor` URL.
+- ~~Update the placeholder in `docs/linkedin.md` and the closing link in
+  `docs/blog.md`/`docs/x-thread.md` with the public `withmartian/thor` URL.~~
+  **Done** — all point at <https://github.com/withmartian/thor>.
+- **Make the repo public** — required before the X/LinkedIn links resolve for
+  readers (`gh repo edit withmartian/thor --visibility public`, or via GitHub
+  Settings).
 - Confirm the [EXAMPLES.md](../EXAMPLES.md) links resolve (each example repo is
   public or the row notes it is internal).
 - Delete this maintainer doc.

@@ -3,8 +3,8 @@
 *Draft teaser thread for launch on X. Companion to the
 [long-form write-up](blog.md) and the [LinkedIn teaser](linkedin.md). Its only
 jobs are to set up the open-ended-research premise, pitch the collaborative
-approach, and earn the click — it does not try to explain the method. Swap
-`github.com/withmartian/thor` for the final URL before posting.*
+approach, and earn the click — it does not try to explain the method. The link in
+post 5 (`github.com/withmartian/thor`) is live.*
 
 ---
 

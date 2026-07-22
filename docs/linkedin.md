@@ -34,5 +34,5 @@ collaborator: we bring different strengths, they shift over time, and good
 working habits should be built in from day one. Neither of us is an oracle alone —
 together we get closer than either could.
 
-Long-form write-up and the templates are here: [LINK]. I would like to hear what
-breaks.
+Long-form write-up and the templates are here: https://github.com/withmartian/thor
+I would like to hear what breaks.

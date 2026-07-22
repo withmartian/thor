@@ -5,14 +5,19 @@
 **A small set of Markdown templates, plus a working practice, for running real
 research with AI agents as semi-independent assistants.**
 
-The core idea is **positive disagreement.** Real research has no external oracle —
-no test that tells you "done" — so your initial guesses are often wrong and
-nothing says so. Neither the human nor the agent is an oracle alone; but working
-well together they get closer to the truth than either could — hence
-*Human-Oracle*. thor keeps the two as peers who are *expected* to disagree: it
-records both sets of beliefs in separate files, biases experiments toward ones
-that settle the difference, and runs a fresh **skeptic** over every plan and
-result. Writing everything down is the substrate that makes this work.
+It is built for **open-ended, multi-week research** — the kind where you begin
+with an area, a direction, and a few clues, but the destination is unknown and
+your starting hypothesis is probably wrong. Unlike software, there is no test for
+"done", and no oracle to tell you whether today moved you closer.
+
+The core idea is **positive disagreement.** Because nothing external tells you
+when a hypothesis is wrong, the real danger is over-believing it — yours or the
+agent's — for weeks. So thor keeps the human and the agent as peers who are
+*expected* to disagree: neither is an oracle alone, but working well together
+they get closer to the truth than either could (hence *Human-Oracle*). It records
+both sets of beliefs in separate files, biases experiments toward ones that
+settle the difference, and runs a fresh **skeptic** over every plan and result.
+Writing everything down is the substrate that makes this work.
 
 > **New here?** Read the [long-form write-up](docs/blog.md) — *doing great
 > research with AI agents that disagree with me* — then clone the
