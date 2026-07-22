@@ -14,7 +14,7 @@ The core idea is **positive disagreement.** Because nothing external tells you
 when a hypothesis is wrong, the real danger is over-believing it — yours or the
 agent's — for weeks. So thor keeps the human and the agent as peers who are
 *expected* to disagree: neither is an oracle alone, but working well together
-they get closer to the truth than either could (hence *Human-Oracle*). It records
+they get closer to the truth than either could. It records
 both sets of beliefs in separate files, biases experiments toward ones that
 settle the difference, and runs a fresh **skeptic** over every plan and result.
 Writing everything down is the substrate that makes this work.
