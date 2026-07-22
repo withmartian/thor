@@ -12,7 +12,7 @@ exploration.
 > set down to just the shared glossary and document rules.
 
 | Repo | What it studies | How thor was used |  
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | [quanta_maths](https://github.com/PhilipQuirke/quanta_maths) | Understanding addition and subtraction in transformers (paper: [arXiv:2402.02619](https://arxiv.org/abs/2402.02619)) | We added thor to this *mature* project to extend the research. Two agents produced **35 experiments in 3 days** - delivering the desired results. |
 | [intent](https://github.com/withmartian/intent) | The **KID (Knowing / Intent / Doing)** lens for attention-head role claims in transformers (paper: [arXiv:2606.08292](https://arxiv.org/abs/2606.08292)) | Where thor was born and refined over many experiments and ~4 months. A valid, novel paper — and an honest data point that a disciplined process does not guarantee an *exciting* result. |
 | [Wayfinder](https://github.com/withmartian/wayfinder) | Comparing inference-time interpretability methods — which one actually helps *your* model on *your* task | The most exploratory case: **5 concurrent threads** over ~3 months, several conjectures disproved, several findings worth publishing — the setting thor's positive-disagreement and skeptic gates were built for. |
