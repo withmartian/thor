@@ -78,12 +78,22 @@ instead of scattering among ad-hoc docs.
 
 ### Naming convention
 
-- **Single-topic project:** the prefix is `thor`. Use the files exactly as
-  shipped — no renaming required.
-- **Multi-topic project:** copy the *per-topic* docs once per topic and replace
-  `thor` with the topic name — e.g. `methods-agent.md`, `diversity-next-steps.md`.
-- **Project-wide docs keep the `thor-` prefix in every project:**
-  `thor-document-rules.md` and `thor-glossary.md`. Exactly one of each per project.
+The two tables above split the docs into **per-topic** (duplicated once per
+thread) and **project-wide** (a single shared instance). That split is the whole
+naming rule:
+
+- **Single-topic project:** keep the `thor-` prefix everywhere and use the files
+  exactly as shipped — no renaming.
+- **Multi-topic project:** copy the *per-topic* docs once per thread and replace
+  `thor` with the thread's name (`maths-agent.md`, `maths-conjectures-human.md`,
+  …; `paper-agent.md`, …). The **project-wide** docs are *not* copied — keep
+  exactly one `thor-document-rules.md` and one `thor-glossary.md`, still
+  `thor-`-prefixed, shared across every thread.
+
+So a project with a `maths` research thread and a `paper` write-up thread carries
+a full set of `maths-*` docs, a full set of `paper-*` docs, and a single shared
+`thor-document-rules.md` + `thor-glossary.md`. (A project's first/primary thread
+may just keep the `thor-` prefix instead of picking a name.)
 
 ## Start a new project
 
@@ -94,9 +104,10 @@ instead of scattering among ad-hoc docs.
 4. List a few first experiments in `thor-next-steps.md`.
 5. Start an agent with: *"Read `thor-agent.md`. Proceed per the contract."*
 
-For a multi-topic project, repeat steps 2–4 per topic (replacing `thor` with the
-topic name on the per-topic docs), and keep a single shared
-`thor-document-rules.md` and `thor-glossary.md`.
+For a multi-topic project, repeat steps 2–4 per thread (replacing `thor` with the
+thread name on the per-topic docs), keep a single shared `thor-document-rules.md`
+and `thor-glossary.md`, and start each agent by naming its thread: *"You are the
+`maths` thread. Read `maths-agent.md`. Proceed per the contract."*
 
 ## The twelve practices behind the templates
 
