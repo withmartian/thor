@@ -5,7 +5,7 @@
 **TL;DR:** Agents have given me a genuine level-up. This past quarter, working
 with agents, I roughly tripled my research throughput — and the quality went up,
 not down. This is how I do it. The reusable templates are in
-[this repo](../README.md).
+[this repo](https://github.com/withmartian/thor).
 
 ## 1. The skill researchers should learn now
 
@@ -57,12 +57,12 @@ I want **positive disagreement** from agents. My process for this has a few
 moving parts:
 
 - **Two separate belief files.**
-  [Human conjectures](../templates/thor-conjectures-human.md) and
-  [agent conjectures](../templates/thor-conjectures-agent.md) live in different
+  [Human conjectures](https://github.com/withmartian/thor/templates/thor-conjectures-human.md) and
+  [agent conjectures](https://github.com/withmartian/thor/templates/thor-conjectures-agent.md) live in different
   files with different owners. I own mine; the agent owns its own and updates it
   as experiment results land. They are allowed to disagree, and usually do.
 - **Disagreement written into the contract.** Every agent reads
-  [`thor-agent.md`](../templates/thor-agent.md) on startup, and its standing
+  [`thor-agent.md`](https://github.com/withmartian/thor/templates/thor-agent.md) on startup, and its standing
   instruction is blunt: do not silently agree with the human's conjectures; they
   are expected to be incomplete or wrong; push back and propose alternatives.
 - **Experiments that settle bets.** The agent is asked to pick a next
@@ -70,7 +70,7 @@ moving parts:
   conjectures* — mine and the agent's — rather than pile confirmation on whoever
   spoke first.
 - **Pre-registered, neutral study plans.** Each experiment gets a
-  [study document](../templates/thor-study-template.md) stating what will run and
+  [study document](https://github.com/withmartian/thor/templates/thor-study-template.md) stating what will run and
   what would count as success, failure, ambiguity, or invalidity — before the
   run. It can name the competing conjectures, but it must state them neutrally,
   not as advocacy for a particular result.
@@ -115,26 +115,26 @@ thor is a handful of Markdown files, each with one job and one owner. The two
 conjecture files and the pre-registered study docs above are the heart of it. The
 rest hold the project together:
 
-- **The contract** ([`thor-agent.md`](../templates/thor-agent.md)) is the entry
+- **The contract** ([`thor-agent.md`](https://github.com/withmartian/thor/templates/thor-agent.md)) is the entry
   point. Every session starts the same way — "read `thor-agent.md`" — and that
   one ritual, rehydration, works only because the project state lives in the docs
   and not the session. It is also where the push-back culture lives.
-- **A ranked agenda** ([`thor-next-steps.md`](../templates/thor-next-steps.md)):
+- **A ranked agenda** ([`thor-next-steps.md`](https://github.com/withmartian/thor/templates/thor-next-steps.md)):
   what to do next, re-ranked after every result.
 - **The results trio:** a compact current-story summary, an append-only
   chronological ledger of what ran, and a claim-to-evidence map
-  ([results-summary](../templates/thor-results-summary.md),
-  [results-by-time](../templates/thor-results-by-time.md),
-  [claim-evidence](../templates/thor-claim-evidence.md)). These are strictly
+  ([results-summary](https://github.com/withmartian/thor/templates/thor-results-summary.md),
+  [results-by-time](https://github.com/withmartian/thor/templates/thor-results-by-time.md),
+  [claim-evidence](https://github.com/withmartian/thor/templates/thor-claim-evidence.md)). These are strictly
   empirical — no conjecture allowed. Keeping observed evidence and speculative
   belief in separate files is a guardrail against biasing results.
-- **One glossary** ([`thor-glossary.md`](../templates/thor-glossary.md)). Agents
+- **One glossary** ([`thor-glossary.md`](https://github.com/withmartian/thor/templates/thor-glossary.md)). Agents
   invent their own compact terms in a project, partly for token efficiency, and
   over weeks those meanings drift. A single project-wide glossary forces terms to
   be defined once and used consistently everywhere.
 
 The full role and update rules for each document live in
-[`thor-document-rules.md`](../templates/thor-document-rules.md); I will not
+[`thor-document-rules.md`](https://github.com/withmartian/thor/templates/thor-document-rules.md); I will not
 repeat them here.
 
 ## 5. Be a manager: assistant, not scientist
@@ -209,9 +209,9 @@ On an older project I re-ran with thor, two agents produced 35 experiments in
 three days.
 
 I have pulled the documents into a small, project-agnostic set of
-[templates](../README.md), explicit enough that a new project starts from the
+[templates](https://github.com/withmartian/thor/templates), explicit enough that a new project starts from the
 recommended contract rather than from oral tradition. You can see them at work in
-[four real projects](../EXAMPLES.md).
+[four real projects](https://github.com/withmartian/thor/EXAMPLES.md).
 
 This process does not guarantee an interesting result — one of my own projects
 produced a technically solid, valid paper with some novel findings that simply
@@ -224,4 +224,3 @@ keep improving. If you try them, I would like to hear what broke.
 ---
 
 **Get the templates:** [github.com/withmartian/thor](https://github.com/withmartian/thor)
-· Walkthroughs on real projects coming.
