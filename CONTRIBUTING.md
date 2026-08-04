@@ -1,4 +1,4 @@
-# Contributing to thor
+# <img src="images/thor-mark.png" width="40" alt=""> Contributing to thor
 
 thor is a small, curated framework rather than a large open codebase, so it is
 maintained by hand rather than through open pull requests. The most valuable

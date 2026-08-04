@@ -3,6 +3,11 @@
 *Short-form companion to the [long-form write-up](blog.md). Vibes the idea and
 earns the click; the mechanics live in the blog.*
 
+*Image: attach [`images/thor-cover.png`](../images/thor-cover.png) to the post.
+LinkedIn's own link card for the repo URL will use the GitHub social preview
+([`images/thor-social.png`](../images/thor-social.png)), so an attached image
+gives the same art at better crop — pick one, do not do both.*
+
 ---
 
 I feel like a carpenter who just discovered power tools.

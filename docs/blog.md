@@ -1,4 +1,4 @@
-# thor: doing great research with AI agents that disagree with me
+# <img src="../images/thor-mark.png" width="40" alt=""> thor: doing great research with AI agents that disagree with me
 
 *By Philip Quirke (Martian)*
 

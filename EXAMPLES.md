@@ -1,4 +1,4 @@
-# thor in the wild
+# <img src="images/thor-mark.png" width="40" alt=""> thor in the wild
 
 thor was not designed in the abstract — it was extracted from real research
 projects and then fed back into them. These four are worked examples of the

@@ -6,6 +6,11 @@ jobs are to set up the open-ended-research premise, pitch the collaborative
 approach, and earn the click — it does not try to explain the method. The link in
 post 5 (`github.com/withmartian/thor`) is live.*
 
+*Image: attach [`images/thor-cover.png`](../images/thor-cover.png) to post 1 — it
+carries the name and the one-line pitch for anyone who never reaches post 5.
+Post 5's link card renders the GitHub social preview
+([`images/thor-social.png`](../images/thor-social.png)) automatically.*
+
 ---
 
 **1/**

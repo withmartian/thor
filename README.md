@@ -1,4 +1,4 @@
-# thor — Towards Human-Oracle Research
+# ![thor — Towards Human-Oracle Research: a tool for turning agents into semi-independent research assistants, by Martian](images/thor-cover.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -108,6 +108,14 @@ For a multi-topic project, repeat steps 2–4 per thread (replacing `thor` with 
 thread name on the per-topic docs), keep a single shared `thor-document-rules.md`
 and `thor-glossary.md`, and start each agent by naming its thread: *"You are the
 `maths` thread. Read `maths-agent.md`. Proceed per the contract."*
+
+Optionally, mark the project as a thor project so a collaborator — or you, six
+weeks later — can see which practice the docs belong to. Paste this into your own
+README:
+
+```markdown
+[<img src="https://raw.githubusercontent.com/withmartian/thor/main/images/thor-mark.png" width="16" alt=""> uses thor](https://github.com/withmartian/thor)
+```
 
 ## The twelve practices behind the templates
 
