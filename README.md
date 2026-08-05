@@ -1,6 +1,12 @@
-# ![thor — Towards Human-Oracle Research: a tool for turning agents into semi-independent research assistants, by Martian](images/thor-cover.png)
+<h1 align="center">thor: Towards Human-Oracle Research</h1>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+<p align="center">
+  <a href="https://github.com/withmartian/thor/blob/main/LICENSE"><img src="https://img.shields.io/github/license/withmartian/ares.svg" alt="License"></a>
+</p>
+
+<p align="center">
+  <img margin="auto" width="auto" height="312" alt="image" src="images/thor-icon.png" />
+</p>
 
 **A small set of Markdown templates, plus a working practice, for running real
 research with AI agents as semi-independent assistants.**
