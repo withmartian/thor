@@ -1,4 +1,4 @@
-# thor — LinkedIn teaser
+# thor — LinkedIn
 
 *Short-form companion to the [long-form write-up](blog.md). Vibes the idea and
 earns the click; the mechanics live in the blog.*
@@ -9,6 +9,8 @@ LinkedIn's own link card for the repo URL will use the GitHub social preview
 gives the same art at better crop — pick one, do not do both.*
 
 ---
+
+![thor cover](../images/thor-cover.png)
 
 I feel like a carpenter who just discovered power tools.
 
