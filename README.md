@@ -1,7 +1,7 @@
 <h1 align="center">thor: Towards Human-Oracle Research</h1>
 
 <p align="center">
-  <a href="https://github.com/withmartian/thor/blob/main/LICENSE"><img src="https://img.shields.io/github/license/withmartian/ares.svg" alt="License"></a>
+  <a href="https://github.com/withmartian/thor/blob/main/LICENSE"><img src="https://img.shields.io/github/license/withmartian/thor.svg" alt="License"></a>
 </p>
 
 <p align="center">
