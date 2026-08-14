@@ -35,6 +35,11 @@ choose experiments that discriminate between them. Then we use fresh "skeptic"
 agents as a third party to keep us both honest. It is cheap insurance that
 raises quality.
 
+This isn't just my hunch. Anthropic's alignment team, running fleets of
+autonomous research agents, reported the same shift I keep seeing: the hard part
+stops being *generating* ideas and becomes *evaluating* them — which is exactly
+what the skeptic step is for.
+
 I have written the whole practice up as a small set of open templates — **thor**,
 Towards Human-Oracle Research. The name is about treating the agent as a real
 collaborator: we bring different strengths, they shift over time, and good
