@@ -29,7 +29,7 @@ Writing everything down is the substrate that makes this work.
 > research with AI agents that disagree with me* — then clone the
 > [templates](templates/). See thor at work in [four real projects](EXAMPLES.md).
 
-![thor document flow](images/thor-overview.png)
+![thor document flow](images/thor-overview.svg)
 
 ## Why a method at all?
 
