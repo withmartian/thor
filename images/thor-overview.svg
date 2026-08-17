@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 1216" width="1320" height="1216" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 1348" width="1320" height="1348" role="img" aria-labelledby="t d">
   <title id="t">thor document flow</title>
-  <desc id="d">Two lanes: the human research manager on the left, the AI research assistant on the right. Beliefs are kept in two separate conjecture documents, feed a ranked agenda, then a stack of pre-registered study documents — ten to a hundred per project — then a trio of empirical results documents which reflect back into the beliefs. Project-wide foundation documents sit at the bottom.</desc>
+  <desc id="d">Three bands. HYPOTHESIS: the human and the agent keep separate conjecture files and jointly rank a next-steps agenda. EXECUTE: the agent runs ten to a hundred pre-registered studies and maintains a trio of empirical results documents, while the human reviews at the gates; step five reflects results back into the belief files. FOUNDATION: three coordinated project-wide documents, set up once and re-read at every session start. Throughout, the left column is human work and the right column is agent work.</desc>
 
   <defs>
     <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
@@ -21,6 +21,8 @@
     .sub{ font-size: 14.5px; fill: #5C6474; }
     .lg { font-size: 13.5px; fill: #5C6474; }
     .lgn{ font-size: 13px; fill: #8A91A0; }
+    .bnd{ font-size: 17px; font-weight: 700; letter-spacing: 2.2px; fill: #14161C; }
+    .bwh{ font-size: 13.5px; fill: #7A8290; }
     .tag{ font-size: 12.5px; font-weight: 700; letter-spacing: 1.05px; }
     .ttl{ font-size: 16px; font-weight: 600; fill: #14161C; }
     .fn { font-size: 13.5px; }
@@ -34,13 +36,11 @@
   </style>
 
   <!-- page -->
-  <rect x="6" y="6" width="1308" height="1204" rx="20" fill="#FFFFFF" stroke="#E6E8EE"/>
+  <rect x="6" y="6" width="1308" height="1336" rx="20" fill="#FFFFFF" stroke="#E6E8EE"/>
 
   <!-- ── header ───────────────────────────────────────────────────────────── -->
   <text class="s h1" x="52" y="74">thor · document flow</text>
   <text class="s sub" x="52" y="101">Human manages. Agent executes. All durable state lives in version-controlled Markdown.</text>
-
-  <!-- legend -->
   <g>
     <rect x="926" y="57" width="14" height="14" rx="3" fill="#FDF4EA" stroke="#C2660F"/>
     <text class="s lg" x="947" y="69">human-owned</text>
@@ -48,168 +48,176 @@
     <text class="s lg" x="1069" y="69">agent-owned</text>
     <rect x="1170" y="57" width="14" height="14" rx="3" fill="#EAF6F6" stroke="#1B8A8F"/>
     <text class="s lg" x="1191" y="69">coordinated</text>
-    <text class="s lgn" x="1268" y="99" text-anchor="end">Lanes show who does the work · colour shows who owns the document</text>
+    <text class="s lgn" x="1268" y="99" text-anchor="end">Columns show who does the work · colour shows who owns the document</text>
   </g>
 
-  <!-- ── lanes ────────────────────────────────────────────────────────────── -->
-  <rect x="188" y="120" width="336" height="860" rx="18" fill="#FCF8F4" stroke="#F0E7DC"/>
-  <rect x="548" y="120" width="668" height="860" rx="18" fill="#F7F7FD" stroke="#E7E7F5"/>
+  <!-- ── column headers ───────────────────────────────────────────────────── -->
+  <rect x="218" y="128" width="300" height="34" rx="17" fill="#B4530A"/>
+  <text class="s lane" x="368" y="151" text-anchor="middle">YOU — RESEARCH MANAGER</text>
+  <rect x="580" y="128" width="320" height="34" rx="17" fill="#3F3AC4"/>
+  <text class="s lane" x="740" y="151" text-anchor="middle">AGENT — RESEARCH ASSISTANT</text>
 
-  <rect x="206" y="136" width="300" height="34" rx="17" fill="#B4530A"/>
-  <text class="s lane" x="356" y="159" text-anchor="middle">YOU — RESEARCH MANAGER</text>
-  <rect x="570" y="136" width="320" height="34" rx="17" fill="#3F3AC4"/>
-  <text class="s lane" x="730" y="159" text-anchor="middle">AGENT — RESEARCH ASSISTANT</text>
+  <!-- ══ BAND A · HYPOTHESIS ══════════════════════════════════════════════ -->
+  <rect x="188" y="178" width="1028" height="320" rx="18" fill="#FFFFFF" stroke="#E4E7ED"/>
+  <text class="s bnd" x="208" y="210">HYPOTHESIS</text>
+  <text class="s bwh" x="1196" y="210" text-anchor="end">you and the agent, as peers who are expected to disagree</text>
+  <rect x="200" y="224" width="336" height="262" rx="12" fill="#FCF8F4"/>
+  <rect x="560" y="224" width="644" height="262" rx="12" fill="#F7F7FD"/>
 
-  <!-- ── phase labels ─────────────────────────────────────────────────────── -->
+  <!-- step 1 · conjecture -->
+  <text class="s phn" x="52" y="276">1</text>
+  <text class="s ph"  x="52" y="302">CONJECTURE</text>
   <g>
-    <text class="s phn" x="52" y="218">1</text>
-    <text class="s ph"  x="52" y="244">HYPOTHESIZE</text>
-
-    <text class="s phn" x="52" y="362">2</text>
-    <text class="s ph"  x="52" y="388">PLAN</text>
-
-    <text class="s phn" x="52" y="511">3</text>
-    <text class="s ph"  x="52" y="537">RUN</text>
-
-    <text class="s phn" x="52" y="788">4</text>
-    <text class="s ph"  x="52" y="814">RECORD</text>
-  </g>
-
-  <!-- ── 1 · hypothesize ──────────────────────────────────────────────────── -->
-  <g>
-    <path d="M213,182 H488 L506,200 V267 A7,7 0 0 1 499,274 H213 A7,7 0 0 1 206,267 V189 A7,7 0 0 1 213,182 Z" fill="#FDF4EA" stroke="#C2660F" stroke-width="1.6"/>
-    <path d="M488,182 V200 H506 Z" fill="#C2660F" fill-opacity=".22"/>
-    <path d="M488,182 V200 H506" fill="none" stroke="#C2660F" stroke-width="1.2"/>
-    <text class="s tag" x="226" y="210" fill="#97430A">HUMAN-OWNED</text>
-    <text class="s ttl" x="226" y="236">My hypotheses &amp; priors</text>
-    <text class="m fn"  x="226" y="260" fill="#97430A">thor-conjectures-human.md</text>
+    <path d="M225,238 H500 L518,256 V323 A7,7 0 0 1 511,330 H225 A7,7 0 0 1 218,323 V245 A7,7 0 0 1 225,238 Z" fill="#FDF4EA" stroke="#C2660F" stroke-width="1.6"/>
+    <path d="M500,238 V256 H518 Z" fill="#C2660F" fill-opacity=".22"/>
+    <path d="M500,238 V256 H518" fill="none" stroke="#C2660F" stroke-width="1.2"/>
+    <text class="s tag" x="238" y="266" fill="#97430A">HUMAN-OWNED</text>
+    <text class="s ttl" x="238" y="292">My hypotheses &amp; priors</text>
+    <text class="m fn"  x="238" y="316" fill="#97430A">thor-conjectures-human.md</text>
   </g>
   <g>
-    <path d="M577,182 H872 L890,200 V267 A7,7 0 0 1 883,274 H577 A7,7 0 0 1 570,267 V189 A7,7 0 0 1 577,182 Z" fill="#EEEFFC" stroke="#4B45D0" stroke-width="1.6"/>
-    <path d="M872,182 V200 H890 Z" fill="#4B45D0" fill-opacity=".22"/>
-    <path d="M872,182 V200 H890" fill="none" stroke="#4B45D0" stroke-width="1.2"/>
-    <text class="s tag" x="590" y="210" fill="#3A35B8">AGENT-OWNED</text>
-    <text class="s ttl" x="590" y="236">Agent's hypotheses &amp; priors</text>
-    <text class="m fn"  x="590" y="260" fill="#3A35B8">thor-conjectures-agent.md</text>
+    <path d="M587,238 H882 L900,256 V323 A7,7 0 0 1 893,330 H587 A7,7 0 0 1 580,323 V245 A7,7 0 0 1 587,238 Z" fill="#EEEFFC" stroke="#4B45D0" stroke-width="1.6"/>
+    <path d="M882,238 V256 H900 Z" fill="#4B45D0" fill-opacity=".22"/>
+    <path d="M882,238 V256 H900" fill="none" stroke="#4B45D0" stroke-width="1.2"/>
+    <text class="s tag" x="600" y="266" fill="#3A35B8">AGENT-OWNED</text>
+    <text class="s ttl" x="600" y="292">Agent's hypotheses &amp; priors</text>
+    <text class="m fn"  x="600" y="316" fill="#3A35B8">thor-conjectures-agent.md</text>
   </g>
-  <path d="M516,228 H560" fill="none" stroke="#7A8290" stroke-width="1.8" marker-start="url(#ahR)" marker-end="url(#ah)"/>
-  <text class="s cap" x="538" y="292" text-anchor="middle">Two belief files, two owners.</text>
-  <text class="s cap" x="538" y="311" text-anchor="middle">The agent is told to push back, not agree.</text>
+  <path d="M528,284 H570" fill="none" stroke="#7A8290" stroke-width="1.8" marker-start="url(#ahR)" marker-end="url(#ah)"/>
+  <text class="s cap" x="549" y="348" text-anchor="middle">Two belief files, two owners.</text>
+  <text class="s cap" x="549" y="367" text-anchor="middle">The agent is told to push back, not agree.</text>
 
-  <!-- ── 2 · plan ─────────────────────────────────────────────────────────── -->
-  <path d="M330,278 V322" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
-  <path d="M744,278 V322" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
+  <!-- step 5 label · lands here -->
+  <text class="s phn" x="930" y="250">5</text>
+  <text class="s ph"  x="964" y="250">REFLECT</text>
+  <text class="s cap" x="964" y="272">results update beliefs</text>
+
+  <!-- step 2 · plan -->
+  <text class="s phn" x="52" y="420">2</text>
+  <text class="s ph"  x="52" y="446">PLAN</text>
+  <path d="M340,334 V378" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
+  <path d="M760,334 V378" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
   <g>
-    <path d="M303,326 H758 L776,344 V411 A7,7 0 0 1 769,418 H303 A7,7 0 0 1 296,411 V333 A7,7 0 0 1 303,326 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
-    <path d="M758,326 V344 H776 Z" fill="#1B8A8F" fill-opacity=".22"/>
-    <path d="M758,326 V344 H776" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
-    <text class="s tag" x="316" y="354" fill="#0C5A5E">COORDINATED · AGENT PROPOSES, YOU APPROVE</text>
-    <text class="s ttl" x="316" y="380">Ranked agenda of what to do next</text>
-    <text class="m fn"  x="316" y="404" fill="#0C5A5E">thor-next-steps.md</text>
+    <path d="M316,382 H771 L789,400 V467 A7,7 0 0 1 782,474 H316 A7,7 0 0 1 309,467 V389 A7,7 0 0 1 316,382 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
+    <path d="M771,382 V400 H789 Z" fill="#1B8A8F" fill-opacity=".22"/>
+    <path d="M771,382 V400 H789" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
+    <text class="s tag" x="329" y="410" fill="#0C5A5E">COORDINATED · AGENT PROPOSES, YOU APPROVE</text>
+    <text class="s ttl" x="329" y="436">Ranked agenda of what to do next</text>
+    <text class="m fn"  x="329" y="460" fill="#0C5A5E">thor-next-steps.md</text>
   </g>
 
-  <!-- ── 3 · run · the study stack ────────────────────────────────────────── -->
-  <path d="M536,418 V509 Q536,521 548,521 H616" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
+  <!-- ══ BAND B · EXECUTE ═════════════════════════════════════════════════ -->
+  <rect x="188" y="522" width="1028" height="598" rx="18" fill="#FFFFFF" stroke="#E4E7ED"/>
+  <text class="s bnd" x="208" y="554">EXECUTE</text>
+  <text class="s bwh" x="1196" y="554" text-anchor="end">the agent does the work · you review at both gates</text>
+  <rect x="200" y="572" width="336" height="536" rx="12" fill="#FCF8F4"/>
+  <rect x="560" y="572" width="644" height="536" rx="12" fill="#F7F7FD"/>
+
+  <path d="M549,474 V659 Q549,671 561,671 H616" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
+
+  <!-- step 3 · run -->
+  <text class="s phn" x="52" y="663">3</text>
+  <text class="s ph"  x="52" y="689">RUN</text>
   <g>
-    <!-- receding stack -->
-    <path d="M659,430 H1154 L1172,448 V533 A7,7 0 0 1 1165,540 H659 A7,7 0 0 1 652,533 V437 A7,7 0 0 1 659,430 Z" fill="#F6FBFB" stroke="#9CC6C8" stroke-width="1.2"/>
-    <path d="M651,439 H1146 L1164,457 V542 A7,7 0 0 1 1157,549 H651 A7,7 0 0 1 644,542 V446 A7,7 0 0 1 651,439 Z" fill="#F4FAFA" stroke="#86BBBD" stroke-width="1.3"/>
-    <path d="M643,448 H1138 L1156,466 V551 A7,7 0 0 1 1149,558 H643 A7,7 0 0 1 636,551 V455 A7,7 0 0 1 643,448 Z" fill="#F1F9F9" stroke="#6EB0B3" stroke-width="1.4"/>
-    <path d="M635,457 H1130 L1148,475 V560 A7,7 0 0 1 1141,567 H635 A7,7 0 0 1 628,560 V464 A7,7 0 0 1 635,457 Z" fill="#EEF7F7" stroke="#55A5A8" stroke-width="1.5"/>
-    <!-- front study doc -->
-    <path d="M627,466 H1122 L1140,484 V569 A7,7 0 0 1 1133,576 H627 A7,7 0 0 1 620,569 V473 A7,7 0 0 1 627,466 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
-    <path d="M1122,466 V484 H1140 Z" fill="#1B8A8F" fill-opacity=".22"/>
-    <path d="M1122,466 V484 H1140" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
-    <text class="s tag" x="640" y="494" fill="#0C5A5E">COORDINATED · ONE DOCUMENT PER EXPERIMENT</text>
-    <text class="s ttl" x="640" y="520">Study: pre-registered plan, then the record</text>
-    <text class="m fn"  x="640" y="552" fill="#0C5A5E">thor-study-&lt;name&gt;.md</text>
-    <rect x="893" y="534" width="229" height="30" rx="15" fill="#1B8A8F"/>
-    <text class="s bdg" x="1008" y="554" text-anchor="middle">10 TO 100 PER PROJECT</text>
+    <path d="M659,580 H1154 L1172,598 V683 A7,7 0 0 1 1165,690 H659 A7,7 0 0 1 652,683 V587 A7,7 0 0 1 659,580 Z" fill="#F6FBFB" stroke="#9CC6C8" stroke-width="1.2"/>
+    <path d="M651,589 H1146 L1164,607 V692 A7,7 0 0 1 1157,699 H651 A7,7 0 0 1 644,692 V596 A7,7 0 0 1 651,589 Z" fill="#F4FAFA" stroke="#86BBBD" stroke-width="1.3"/>
+    <path d="M643,598 H1138 L1156,616 V701 A7,7 0 0 1 1149,708 H643 A7,7 0 0 1 636,701 V605 A7,7 0 0 1 643,598 Z" fill="#F1F9F9" stroke="#6EB0B3" stroke-width="1.4"/>
+    <path d="M635,607 H1130 L1148,625 V710 A7,7 0 0 1 1141,717 H635 A7,7 0 0 1 628,710 V614 A7,7 0 0 1 635,607 Z" fill="#EEF7F7" stroke="#55A5A8" stroke-width="1.5"/>
+    <path d="M627,616 H1122 L1140,634 V719 A7,7 0 0 1 1133,726 H627 A7,7 0 0 1 620,719 V623 A7,7 0 0 1 627,616 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
+    <path d="M1122,616 V634 H1140 Z" fill="#1B8A8F" fill-opacity=".22"/>
+    <path d="M1122,616 V634 H1140" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
+    <text class="s tag" x="640" y="644" fill="#0C5A5E">COORDINATED · ONE DOCUMENT PER EXPERIMENT</text>
+    <text class="s ttl" x="640" y="670">Study: pre-registered plan, then the record</text>
+    <text class="m fn"  x="640" y="702" fill="#0C5A5E">thor-study-&lt;name&gt;.md</text>
+    <rect x="893" y="684" width="229" height="30" rx="15" fill="#1B8A8F"/>
+    <text class="s bdg" x="1008" y="704" text-anchor="middle">10 TO 100 PER PROJECT</text>
   </g>
-  <text class="s cap" x="744" y="608">Criteria for success, failure and ambiguity</text>
-  <text class="s cap" x="744" y="628">are fixed before the run, not after.</text>
+  <text class="s cap" x="1184" y="746" text-anchor="end">Criteria for success, failure and ambiguity</text>
+  <text class="s cap" x="1184" y="764" text-anchor="end">are fixed before the run, not after.</text>
 
   <!-- your control surface -->
   <g>
-    <rect x="206" y="466" width="300" height="218" rx="14" fill="#FFFFFF" stroke="#C2660F" stroke-width="1.5" stroke-dasharray="6 5"/>
-    <text class="s tag" x="226" y="498" fill="#97430A">YOUR CONTROL SURFACE</text>
-    <text class="s bul" x="226" y="536">· Set direction. Review next steps</text>
-    <text class="s bul" x="226" y="576">· Markdown diffs give a</text>
-    <text class="s bul" x="234" y="594">high-level review point</text>
-    <text class="s bul" x="226" y="636">· "Push to git" is a</text>
-    <text class="s bul" x="234" y="654">detail-level review point</text>
+    <rect x="218" y="616" width="300" height="218" rx="14" fill="#FFFFFF" stroke="#C2660F" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text class="s tag" x="238" y="648" fill="#97430A">YOUR CONTROL SURFACE</text>
+    <text class="s bul" x="238" y="686">· Set direction. Review next steps</text>
+    <text class="s bul" x="238" y="726">· Markdown diffs give a</text>
+    <text class="s bul" x="246" y="744">high-level review point</text>
+    <text class="s bul" x="238" y="786">· "Push to git" is a</text>
+    <text class="s bul" x="246" y="804">detail-level review point</text>
+  </g>
+
+  <!-- step 4 · record -->
+  <text class="s phn" x="52" y="918">4</text>
+  <text class="s ph"  x="52" y="944">RECORD</text>
+  <path d="M690,726 V776" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
+  <rect x="580" y="780" width="604" height="292" rx="16" fill="#FFFFFF" stroke="#DDE3EA"/>
+  <text class="s grp" x="596" y="810">THE RESULTS TRIO — STRICTLY EMPIRICAL, NO CONJECTURE</text>
+  <g>
+    <path d="M603,826 H1150 L1168,844 V889 A7,7 0 0 1 1161,896 H603 A7,7 0 0 1 596,889 V833 A7,7 0 0 1 603,826 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
+    <path d="M1150,826 V844 H1168 Z" fill="#1B8A8F" fill-opacity=".22"/>
+    <path d="M1150,826 V844 H1168" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
+    <text class="s ttl" x="614" y="858">Results pertinent to current claims</text>
+    <text class="m fn"  x="614" y="884" fill="#0C5A5E">thor-results-summary.md</text>
+  </g>
+  <g>
+    <path d="M603,906 H1150 L1168,924 V969 A7,7 0 0 1 1161,976 H603 A7,7 0 0 1 596,969 V913 A7,7 0 0 1 603,906 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
+    <path d="M1150,906 V924 H1168 Z" fill="#1B8A8F" fill-opacity=".22"/>
+    <path d="M1150,906 V924 H1168" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
+    <text class="s ttl" x="614" y="938">Append-only ledger of every run</text>
+    <text class="m fn"  x="614" y="964" fill="#0C5A5E">thor-results-by-time.md</text>
+  </g>
+  <g>
+    <path d="M603,986 H1150 L1168,1004 V1049 A7,7 0 0 1 1161,1056 H603 A7,7 0 0 1 596,1049 V993 A7,7 0 0 1 603,986 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
+    <path d="M1150,986 V1004 H1168 Z" fill="#1B8A8F" fill-opacity=".22"/>
+    <path d="M1150,986 V1004 H1168" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
+    <text class="s ttl" x="614" y="1018">Claims mapped to their evidence</text>
+    <text class="m fn"  x="614" y="1044" fill="#0C5A5E">thor-claim-evidence.md</text>
   </g>
 
   <!-- your review loop -->
   <g>
-    <rect x="206" y="708" width="300" height="248" rx="14" fill="#FFFFFF" stroke="#C2660F" stroke-width="1.5" stroke-dasharray="6 5"/>
-    <text class="s tag" x="226" y="740" fill="#97430A">YOUR REVIEW LOOP</text>
-    <text class="s bul" x="226" y="784">· Skeptic gate in a fresh thread,</text>
-    <text class="s bul" x="234" y="802">before launch and after results</text>
-    <text class="s bul" x="226" y="842">· Read the compact summary,</text>
-    <text class="s bul" x="234" y="860">then re-rank the agenda</text>
-    <text class="s bul" x="226" y="900">· Two to many threads at once —</text>
-    <text class="s bul" x="234" y="918">you are the bottleneck, by design</text>
+    <rect x="218" y="858" width="300" height="214" rx="14" fill="#FFFFFF" stroke="#C2660F" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text class="s tag" x="238" y="888" fill="#97430A">YOUR REVIEW LOOP</text>
+    <text class="s bul" x="238" y="926">· Skeptic gate in a fresh thread,</text>
+    <text class="s bul" x="246" y="944">before launch and after results</text>
+    <text class="s bul" x="238" y="982">· Read the compact summary,</text>
+    <text class="s bul" x="246" y="1000">then re-rank the agenda</text>
+    <text class="s bul" x="238" y="1038">· Two to many threads at once —</text>
+    <text class="s bul" x="246" y="1056">you are the bottleneck, by design</text>
   </g>
 
-  <!-- ── 4 · record · the results trio ────────────────────────────────────── -->
-  <path d="M690,576 V636" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
-  <rect x="570" y="640" width="624" height="316" rx="16" fill="#FFFFFF" stroke="#DDE3EA"/>
-  <text class="s grp" x="586" y="670">THE RESULTS TRIO — STRICTLY EMPIRICAL, NO CONJECTURE</text>
-  <g>
-    <path d="M593,686 H1160 L1178,704 V755 A7,7 0 0 1 1171,762 H593 A7,7 0 0 1 586,755 V693 A7,7 0 0 1 593,686 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
-    <path d="M1160,686 V704 H1178 Z" fill="#1B8A8F" fill-opacity=".22"/>
-    <path d="M1160,686 V704 H1178" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
-    <text class="s ttl" x="604" y="718">Results pertinent to current claims</text>
-    <text class="m fn"  x="604" y="744" fill="#0C5A5E">thor-results-summary.md</text>
-  </g>
-  <g>
-    <path d="M593,774 H1160 L1178,792 V843 A7,7 0 0 1 1171,850 H593 A7,7 0 0 1 586,843 V781 A7,7 0 0 1 593,774 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
-    <path d="M1160,774 V792 H1178 Z" fill="#1B8A8F" fill-opacity=".22"/>
-    <path d="M1160,774 V792 H1178" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
-    <text class="s ttl" x="604" y="806">Append-only ledger of every run</text>
-    <text class="m fn"  x="604" y="832" fill="#0C5A5E">thor-results-by-time.md</text>
-  </g>
-  <g>
-    <path d="M593,862 H1160 L1178,880 V931 A7,7 0 0 1 1171,938 H593 A7,7 0 0 1 586,931 V869 A7,7 0 0 1 593,862 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
-    <path d="M1160,862 V880 H1178 Z" fill="#1B8A8F" fill-opacity=".22"/>
-    <path d="M1160,862 V880 H1178" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
-    <text class="s ttl" x="604" y="894">Claims mapped to their evidence</text>
-    <text class="m fn"  x="604" y="920" fill="#0C5A5E">thor-claim-evidence.md</text>
-  </g>
+  <!-- step 5 · reflect loop, back up into band A -->
+  <path d="M1184,926 H1232 Q1244,926 1244,914 V296 Q1244,284 1232,284 H906" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
 
-  <!-- reflect loop -->
-  <path d="M1194,798 H1232 Q1244,798 1244,786 V240 Q1244,228 1232,228 H896" fill="none" stroke="#98A0AE" stroke-width="1.8" marker-end="url(#ah)"/>
-  <text class="s ph" x="1264" y="507" text-anchor="middle" transform="rotate(-90 1264 507)">REFLECT · RESULTS UPDATE BELIEFS</text>
+  <!-- ══ BAND C · FOUNDATION ══════════════════════════════════════════════ -->
+  <path d="M549,1156 V1124" fill="none" stroke="#B0B7C3" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ahd)"/>
+  <text class="s cap" x="569" y="1146">rehydrate: every session starts by reading the contract</text>
 
-  <!-- ── foundations ──────────────────────────────────────────────────────── -->
-  <path d="M536,1014 V984" fill="none" stroke="#B0B7C3" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ahd)"/>
-  <text class="s cap" x="556" y="1004">rehydrate: every session starts by reading the contract</text>
-
-  <rect x="188" y="1014" width="1028" height="164" rx="16" fill="#FBFBFD" stroke="#D8DDE6" stroke-dasharray="6 5"/>
-  <text class="s grp" x="208" y="1046">FOUNDATIONS — PROJECT-WIDE, SET UP ONCE</text>
+  <rect x="188" y="1160" width="1028" height="168" rx="16" fill="#FBFBFD" stroke="#D8DDE6" stroke-dasharray="6 5"/>
+  <text class="s bnd" x="208" y="1192">FOUNDATION</text>
+  <text class="s bwh" x="1196" y="1192" text-anchor="end">coordinated · written once, read by both, re-read at every session start</text>
   <g>
-    <path d="M215,1064 H506 L524,1082 V1155 A7,7 0 0 1 517,1162 H215 A7,7 0 0 1 208,1155 V1071 A7,7 0 0 1 215,1064 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
-    <path d="M506,1064 V1082 H524 Z" fill="#1B8A8F" fill-opacity=".22"/>
-    <path d="M506,1064 V1082 H524" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
-    <text class="s tag" x="228" y="1092" fill="#0C5A5E">COORDINATED</text>
-    <text class="s ttl" x="228" y="1120">Contract, culture, rehydration</text>
-    <text class="m fn"  x="228" y="1146" fill="#0C5A5E">thor-agent.md</text>
+    <path d="M215,1210 H506 L524,1228 V1301 A7,7 0 0 1 517,1308 H215 A7,7 0 0 1 208,1301 V1217 A7,7 0 0 1 215,1210 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
+    <path d="M506,1210 V1228 H524 Z" fill="#1B8A8F" fill-opacity=".22"/>
+    <path d="M506,1210 V1228 H524" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
+    <text class="s tag" x="228" y="1238" fill="#0C5A5E">COORDINATED</text>
+    <text class="s ttl" x="228" y="1266">Contract, culture, rehydration</text>
+    <text class="m fn"  x="228" y="1292" fill="#0C5A5E">thor-agent.md</text>
   </g>
   <g>
-    <path d="M551,1064 H842 L860,1082 V1155 A7,7 0 0 1 853,1162 H551 A7,7 0 0 1 544,1155 V1071 A7,7 0 0 1 551,1064 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
-    <path d="M842,1064 V1082 H860 Z" fill="#1B8A8F" fill-opacity=".22"/>
-    <path d="M842,1064 V1082 H860" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
-    <text class="s tag" x="564" y="1092" fill="#0C5A5E">COORDINATED</text>
-    <text class="s ttl" x="564" y="1120">One canonical vocabulary</text>
-    <text class="m fn"  x="564" y="1146" fill="#0C5A5E">thor-glossary.md</text>
+    <path d="M551,1210 H842 L860,1228 V1301 A7,7 0 0 1 853,1308 H551 A7,7 0 0 1 544,1301 V1217 A7,7 0 0 1 551,1210 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
+    <path d="M842,1210 V1228 H860 Z" fill="#1B8A8F" fill-opacity=".22"/>
+    <path d="M842,1210 V1228 H860" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
+    <text class="s tag" x="564" y="1238" fill="#0C5A5E">COORDINATED</text>
+    <text class="s ttl" x="564" y="1266">One canonical vocabulary</text>
+    <text class="m fn"  x="564" y="1292" fill="#0C5A5E">thor-glossary.md</text>
   </g>
   <g>
-    <path d="M887,1064 H1178 L1196,1082 V1155 A7,7 0 0 1 1189,1162 H887 A7,7 0 0 1 880,1155 V1071 A7,7 0 0 1 887,1064 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
-    <path d="M1178,1064 V1082 H1196 Z" fill="#1B8A8F" fill-opacity=".22"/>
-    <path d="M1178,1064 V1082 H1196" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
-    <text class="s tag" x="900" y="1092" fill="#0C5A5E">COORDINATED</text>
-    <text class="s ttl" x="900" y="1120">What each document is for</text>
-    <text class="m fn"  x="900" y="1146" fill="#0C5A5E">thor-document-rules.md</text>
+    <path d="M887,1210 H1178 L1196,1228 V1301 A7,7 0 0 1 1189,1308 H887 A7,7 0 0 1 880,1301 V1217 A7,7 0 0 1 887,1210 Z" fill="#EAF6F6" stroke="#1B8A8F" stroke-width="1.6"/>
+    <path d="M1178,1210 V1228 H1196 Z" fill="#1B8A8F" fill-opacity=".22"/>
+    <path d="M1178,1210 V1228 H1196" fill="none" stroke="#1B8A8F" stroke-width="1.2"/>
+    <text class="s tag" x="900" y="1238" fill="#0C5A5E">COORDINATED</text>
+    <text class="s ttl" x="900" y="1266">What each document is for</text>
+    <text class="m fn"  x="900" y="1292" fill="#0C5A5E">thor-document-rules.md</text>
   </g>
 </svg>
