@@ -39,7 +39,7 @@
   <rect x="6" y="6" width="1308" height="1336" rx="20" fill="#FFFFFF" stroke="#E6E8EE"/>
 
   <!-- ── header ───────────────────────────────────────────────────────────── -->
-  <text class="s h1" x="52" y="74">thor · document flow</text>
+  <text class="s h1" x="52" y="74">thor · process flow</text>
   <text class="s sub" x="52" y="101">Human manages. Agent executes. All durable state lives in version-controlled Markdown.</text>
   <g>
     <rect x="926" y="57" width="14" height="14" rx="3" fill="#FDF4EA" stroke="#C2660F"/>
@@ -53,20 +53,20 @@
 
   <!-- ── column headers ───────────────────────────────────────────────────── -->
   <rect x="218" y="128" width="300" height="34" rx="17" fill="#B4530A"/>
-  <text class="s lane" x="368" y="151" text-anchor="middle">YOU — RESEARCH MANAGER</text>
-  <rect x="580" y="128" width="320" height="34" rx="17" fill="#3F3AC4"/>
-  <text class="s lane" x="740" y="151" text-anchor="middle">AGENT — RESEARCH ASSISTANT</text>
+  <text class="s lane" x="368" y="151" text-anchor="middle">YOU — RESEARCH LEAD</text>
+  <rect x="550" y="128" width="380" height="34" rx="17" fill="#3F3AC4"/>
+  <text class="s lane" x="740" y="151" text-anchor="middle">AGENT FLEET — RESEARCH ASSISTANTS</text>
 
   <!-- ══ BAND A · HYPOTHESIS ══════════════════════════════════════════════ -->
   <rect x="188" y="178" width="1028" height="320" rx="18" fill="#FFFFFF" stroke="#E4E7ED"/>
-  <text class="s bnd" x="208" y="210">HYPOTHESIS</text>
+  <text class="s bnd" x="208" y="210">STRATEGY</text>
   <text class="s bwh" x="1196" y="210" text-anchor="end">you and the agent, as peers who are expected to disagree</text>
   <rect x="200" y="224" width="336" height="262" rx="12" fill="#FCF8F4"/>
   <rect x="560" y="224" width="644" height="262" rx="12" fill="#F7F7FD"/>
 
   <!-- step 1 · conjecture -->
   <text class="s phn" x="52" y="276">1</text>
-  <text class="s ph"  x="52" y="302">CONJECTURE</text>
+  <text class="s ph"  x="52" y="302">FRAME</text>
   <g>
     <path d="M225,238 H500 L518,256 V323 A7,7 0 0 1 511,330 H225 A7,7 0 0 1 218,323 V245 A7,7 0 0 1 225,238 Z" fill="#FDF4EA" stroke="#C2660F" stroke-width="1.6"/>
     <path d="M500,238 V256 H518 Z" fill="#C2660F" fill-opacity=".22"/>
@@ -117,7 +117,7 @@
 
   <!-- step 3 · run -->
   <text class="s phn" x="52" y="663">3</text>
-  <text class="s ph"  x="52" y="689">RUN</text>
+  <text class="s ph"  x="52" y="689">REASON</text>
   <g>
     <path d="M659,580 H1154 L1172,598 V683 A7,7 0 0 1 1165,690 H659 A7,7 0 0 1 652,683 V587 A7,7 0 0 1 659,580 Z" fill="#F6FBFB" stroke="#9CC6C8" stroke-width="1.2"/>
     <path d="M651,589 H1146 L1164,607 V692 A7,7 0 0 1 1157,699 H651 A7,7 0 0 1 644,692 V596 A7,7 0 0 1 651,589 Z" fill="#F4FAFA" stroke="#86BBBD" stroke-width="1.3"/>
