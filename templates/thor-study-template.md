@@ -8,6 +8,21 @@ Important: in the pre-run sections, state competing hypotheses or reads
 neutrally. Do not write the plan as advocacy for the hypothesis you hope it
 supports. This guards against steering the experiment toward a desired answer.
 
+## Executive summary
+
+*Omit this section until the study has results. Write it during result
+recording, then refresh it after the post-result skeptic gate passes so it
+states the reviewed verdict. Aimed at a skim reader: a few sentences, takeaway
+not method. A null study can be one line — "Study failed to produce any
+interesting results." Full rules:
+[Executive Summary](thor-document-rules.md#executive-summary).*
+
+`<what this study found, and the caveat a skim reader needs>`
+
+`<optional: one plot carrying the main result, with a caption that states the
+takeaway rather than the axes. Omit for null results or when no single plot is
+honest about the finding.>`
+
 ## Pre-run (write before the experiment)
 
 - **Question**: `<the specific empirical question>`
@@ -32,7 +47,8 @@ supports. This guards against steering the experiment toward a desired answer.
 
 ## Post-run (fill in after the experiment)
 
-- **Executive summary**: `<main result + most important caveat>`
+- **Executive summary**: `<written at the top of this note, not here — see the
+  section above. Refresh it after the post-result skeptic gate passes>`
 - **Run record**: `<command, environment, dates, artifact paths, commit/hash>`
 - **Results**: `<key quantitative and qualitative results>`
 - **Interpretation**: `<read against the pre-stated success/failure/ambiguous

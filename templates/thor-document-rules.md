@@ -59,7 +59,7 @@ Required phase order for non-trivial experiments:
 3. **Execution phase**: the working thread resolves or explicitly overrules blocking skeptic concerns in the study note, then runs the experiment.
 4. **Result-recording phase**: the working thread syncs artifacts and completes the study note's run record, results, interpretation, limitations, and prediction scoring.
 5. **Post-result skeptic phase**: a separate skeptic thread rehydrates only from version-controlled docs and audits the interpretation, verdict, and prediction scoring before conjectures update or the agenda reranks.
-6. **Router-doc update phase**: after the post-result skeptic gate passes, update ledger, claim-evidence, results summary, results synthesis, conjectures, and agenda as applicable.
+6. **Router-doc update phase**: after the post-result skeptic gate passes, refresh the study note's top-of-document executive summary so it states the reviewed verdict, then update ledger, claim-evidence, results summary, results synthesis, conjectures, and agenda as applicable.
 7. **Cross-document audit phase**: compare changed docs for duplicated detail, conjecture bleed, stale agenda entries, and terminology drift before stopping.
 
 Prediction scoring belongs in the study note as part of the empirical record. It does not by itself update conjectures. Conjecture files, claim files, and agenda files are updated only after the post-result skeptic gate passes.
@@ -225,7 +225,7 @@ Required pre-run sections:
 
 Required post-run sections:
 
-- **Executive Summary**: short summary at the top of the study note.
+- **Executive Summary**: skim-reader summary placed at the **top** of the study note, written after results are in and the post-result skeptic gate has passed. See the executive-summary rules below.
 - **Run Record**: command, environment, local/VM status, dates, artifact paths, upload links, commit or hash if relevant.
 - **Results**: key quantitative and qualitative results.
 - **Interpretation**: actual read against the pre-stated success, failure, ambiguous, and invalid conditions.
@@ -242,10 +242,29 @@ Study-note rules:
 - Do not move the goalposts after seeing results; if criteria change, add an explicit amendment with timing.
 - Prefer `positive`, `negative`, `ambiguous`, `underpowered`, and `invalid` over vague `success`.
 - A negative result is useful when the study note states what it rules out.
-- Keep the executive summary short and refresh it after results are in.
 - Preserve detailed methods, artifacts, raw numerical tables, run records, and implementation notes in the body.
 - Keep raw logs and exhaustive artifact detail out of summary docs; link to them from the study note.
 - Move durable claim changes to the claim-evidence map, bundle coverage to the results ledger, and priority changes to the agenda.
+
+### Executive Summary
+
+Role: let a skim reader learn what this study found without reading the body.
+
+- Place it at the **top** of the study note, immediately after the title and the role pointer, before `Question`.
+- Write it in the result-recording phase and **refresh it after the post-result skeptic gate passes**, so the summary states the reviewed verdict rather than the author's first read. Until the study has results, either omit the section or mark the note `Status: PRE-LAUNCH`.
+- Keep it short: a few sentences. A null study can be one line, for example `Study failed to produce any interesting results.`
+- State the takeaway, not the method. Give at most a few anchor numbers, and only where the number *is* the takeaway.
+- Do not restate detail already in `Results` or `Interpretation`. Link down to them instead.
+- Name the most important caveat when one would change how a skim reader uses the result.
+- Use the study's verdict vocabulary (`positive`, `negative`, `ambiguous`, `underpowered`, `invalid`) so the summary and the interpretation cannot drift apart.
+- If the summary is later overtaken by a subsequent study, prepend a short dated correction rather than silently rewriting the original read.
+
+Optional graphic:
+
+- Where one plot carries the main result, embed it in the executive summary.
+- Choose the single most legible figure for a non-expert skim reader; a busy diagnostic panel belongs in the body.
+- The caption states the takeaway, not the axes: `Treatment lifts held-out accuracy on all five seeds` beats `Accuracy by seed`.
+- Omit the graphic when the result is null, or when no single plot is honest about the finding. An absent figure is better than a flattering one.
 
 ## Conjectures
 
@@ -281,6 +300,9 @@ Rules:
 - Single-topic project and templates: prefix is `thor`.
 - Multi-topic project: copy per-topic docs once per topic and replace `thor` with the topic name, e.g. `diversity-agent.md`, `ensemble-next-steps.md`.
 - Project-wide docs keep the `thor-` prefix in every repo: `thor-document-rules.md` and `thor-glossary.md`.
+- Project-wide docs exist once per project and are never duplicated per topic. A forked copy is how two threads acquire rival definitions of the same term.
+- Declare the active topics, their scope boundaries, and their entry contracts in a thread registry in the agent contract. State what each topic does not own; overlapping scope is how two threads silently run the same experiment.
+- A cross-topic schema, threshold, or interface that several topics must agree on gets one shared doc and is cited, not restated inside each topic's docs.
 
 ## When To Update What
 

@@ -71,6 +71,7 @@ instead of scattering among ad-hoc docs.
 | [thor-conjectures-agent.md](templates/thor-conjectures-agent.md) | Agent's priors and beliefs | agent |
 | [thor-next-steps.md](templates/thor-next-steps.md) | Ranked agenda of what to do next | coordinated topic doc |
 | [thor-results-summary.md](templates/thor-results-summary.md) | Current best story, compact | coordinated topic doc |
+| [thor-results-synthesis.md](templates/thor-results-synthesis.md) | Mid-level empirical synthesis, organised by question | coordinated topic doc |
 | [thor-results-by-time.md](templates/thor-results-by-time.md) | Append-only chronological results ledger | coordinated topic doc |
 | [thor-claim-evidence.md](templates/thor-claim-evidence.md) | Durable claims and their supporting evidence | coordinated topic doc |
 | [thor-study-template.md](templates/thor-study-template.md) | One per experiment; pre-registered plan + record | coordinated topic doc |
@@ -139,7 +140,8 @@ README:
    must be defined and used consistently in code, notes, and plots.
 7. **One thread per topic.** For multi-topic projects, give each topic its own
    `<topic>-agent.md` and its own agent, with isolated ownership, sharing the
-   project-wide docs.
+   project-wide docs. Declare the topics and their scope boundaries in a thread
+   registry, and never fork a project-wide doc per topic.
 8. **Verified negatives.** Every assay carries a positive control and an honest
    power statement; a flat result only counts as negative if the harness
    demonstrably could have detected the effect.

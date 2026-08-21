@@ -32,6 +32,46 @@ topics and un-renamed.
 | Document rules | `thor-document-rules.md` |
 | Glossary | `thor-glossary.md` |
 
+## Thread Registry
+
+*Multi-topic projects only. Delete this section in a single-topic project.*
+
+A thread is one research topic with its own agent contract and its own full
+per-topic doc set. Threads run in parallel, each with its own agenda and
+conjectures, and each is entered through its own contract file.
+
+| Thread | Scope | Entry contract |
+| --- | --- | --- |
+| `<name>` | `<what this thread owns, and what it does not>` | `<name>-agent.md` |
+| `<name>` | `<scope>` | `<name>-agent.md` |
+
+Deferred threads — scaffold a full doc set only when unblocked:
+
+- `<name>` — `<what must happen first>`
+
+Rules:
+
+- Each thread carries its own `<thread>-agent.md`, `-conjectures-human.md`, `-conjectures-agent.md`, `-next-steps.md`, `-results-summary.md`, `-results-synthesis.md`, `-results-by-time.md`, `-claim-evidence.md`, and study notes under `study-<thread>/`.
+- State what each thread does **not** own. Overlapping scope is how two threads silently run the same experiment.
+- A thread that owns no experiments and only reads evidence, such as a paper thread, says so explicitly and is read-only over other threads' docs.
+- Do not create a thread before it has a question of its own. Threads are cheap to add and expensive to keep coherent.
+
+### Project-Wide Shared Docs
+
+One instance each, project-wide. **Never duplicate these per thread** — a forked
+copy is how two threads end up with rival definitions of the same term.
+
+| Doc | Purpose |
+| --- | --- |
+| `thor-document-rules.md` | Portable document roles, update order, skeptic gates, anti-patterns |
+| `thor-glossary.md` | Canonical vocabulary across all threads (anti-drift) |
+| `thor-study-template.md` | Study-note template; copy per experiment into `study-<thread>/` |
+| `<project cross-thread contract>` | `<schemas, thresholds, interfaces that several threads must agree on. Divergence here breaks integration silently.>` |
+
+Where several threads must agree on a schema, threshold, or interface, give it
+one owner-less shared doc and cite it. Restating a shared constant inside a
+thread's docs is a drift bug, not documentation.
+
 ## Rehydration
 
 Use this after any restart, compaction, model/vendor swap, or long pause:
