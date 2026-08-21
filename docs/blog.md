@@ -4,7 +4,7 @@
 
 **TL;DR:** Agents have given me a genuine level-up. This past quarter, working
 with agents, I roughly tripled my research throughput — and the quality went up,
-not down. This is how I do it. The reusable templates are in
+not down. This is how I did it. The reusable templates are in
 [this repo](https://github.com/withmartian/thor).
 
 ## 1. The skill researchers should learn now
@@ -20,7 +20,8 @@ Research is a harder place to use agents than software engineering. In software,
 the goal is usually clear and you can write a test for "done." My kind of
 research has no such test. I start with an area, a direction, and a few clues —
 but the destination is unknown, and the best I have is a starting hypothesis that
-is probably wrong. There is no oracle to tell me whether today moved me closer.
+is probably wrong. There is no oracle to tell me whether today moved me closer
+to a breakthough.
 
 The central danger, then, is not bad code. It is over-belief in a hypothesis —
 mine or the agent's — that goes unchallenged for weeks. To manage that, I need a
@@ -33,9 +34,9 @@ process that does three things:
 This was a painful curve to climb. To help you avoid that pain, I have written my
 practice up as a small, reusable framework called **thor** — Towards
 Human-Oracle Research. The name is about treating the agent as a real
-collaborator: we bring different strengths, they shift over time, and good
-working habits should be built in now. Neither of us is an oracle alone — but a
-human and agents working well together get closer to the truth than either could
+collaborator: we bring different strengths, these strengths will shift over time, and good
+working habits should and can be built in now. Neither of us is an oracle alone — but
+humans and agents working well together get closer to the truth than either could
 on their own.
 
 The most interesting part, and the part specific to research, is how I
@@ -44,14 +45,15 @@ deliberately keep the agent *disagreeing* with me for weeks.
 ## 2. Positive disagreement
 
 Agents default to being agreeable. It is less than sycophancy, but it is a bias
-toward agreeing with whatever I propose. An agent that will not push back will
+toward agreeing with what I propose. An agent that will not push back will
 happily spend days, and many tokens, chasing a path I suggested. As my idea may
-simply be wrong, that can be costly.
+be wrong, that can be costly.
 
 I have seen the same thing in people. A junior developer who wants to please me,
 who assumes my experience gives me God-like insight (it does not), and who
 therefore buries their own better instinct and builds exactly what I asked for.
-Good management fixes that in people. thor tries to fix it in agents.
+Good managers fixes that failure mode via team culture.
+thor fixes it in agents using process and culture.
 
 I want **positive disagreement** from agents. My process for this has a few
 moving parts:
@@ -144,7 +146,7 @@ cannot yet run research unguided. They are research assistants, not research
 scientists. But they are fast and cheap and they know a lot.
 
 (In one month I let agents self-direct, and the results were uninspiring. They
-went down rabbit holes — 50% clarity in one experiment, then 20%, then 10% —
+went down rabbit holes — 50% clarity in one experiment, then 20%, then 10%, then 1% —
 chasing a fading signal long after I would have given up.)
 
 Agents are genuinely useful as semi-independent assistants, but they still need a
@@ -154,7 +156,7 @@ guidance to step back.
 They also lack research taste. To my eye the agents are very knowledgeable junior
 assistants — strong on things I am weak on, and yet sometimes surprisingly blank
 on something I assumed was obvious. When that happens, I write the missing prior
-into my conjecture file and restart the standard process.
+into my conjecture file and restart the agent.
 
 I review what the agent changes before it is committed. Trust, but verify. The
 documents are how I manage at a distance: they let me set direction, see what the
@@ -168,28 +170,28 @@ many threads I can hold in my head. I usually run two at once, occasionally up t
 five. More threads than I can review actually *lowers* quality. The goal is not
 to maximize the number of threads; it is to maximize knowledge gained per day.
 
-## 6. What it costs, and where it can go wrong
+## 6. What it costs
 
-thor is not free, and it is not self-enforcing. The honest caveats:
+thor is not free, and it is not perfect. The framework makes desired behaviors specific:
 
-- **The skeptic can be sycophantic too.** A reviewer that just says "great
-  experiment" adds nothing. The skeptic prompt has to be explicitly adversarial —
+- **The skeptic can be sycophantic.** A reviewer that just says "great
+  experiment" adds nothing. The skeptic prompt is explicitly adversarial —
   *find why this is wrong or over-claimed* — ideally on a different vendor whose
   failure modes don't match the worker's.
-- **Pre-registration can be quietly gamed.** An agent (or I) can loosen the
+- **Pre-registration can be gamed.** An agent can loosen the
   success criteria after peeking at results. The git history of the study doc is
   the defense: the criteria should provably pre-date the run.
-- **Append-only isn't automatic.** Agents love to "tidy" the chronological
-  ledger and quietly rewrite history. State the rule explicitly and spot-check
-  the diffs.
-- **Rehydration cost grows.** As the ledger lengthens, a fresh agent takes longer
-  to read in. The compact summary is what keeps rehydration cheap — it has to be
-  actively *pruned*, not just appended to.
+- **Append-only isn't automatic.** Agents can "tidy" the chronological
+  ledger and quietly rewrite history. We state the append-only rule
+  explicitly so we always keep all historic results.
+- **Avoid growing rehydration cost.** A fresh agent does not read the ever-lengthening ledger.
+  The compact results and claims summary is what keeps rehydration cheap. These compact files
+  sometimes need manual *pruning*.
 - **The human is the bottleneck, by design.** Throughput is capped by my
   context-switching, not by compute or agent count. That is a feature: it is what
   keeps quality high.
 
-And the cost is a dial, not a fixed tax. Skeptic gates and extra agents cost
+The cost is a dial, not a fixed tax. Skeptic gates and extra agents cost
 tokens; right now my process is, if anything, a little over-strict. When that
 happens, dial the gate frequency down rather than treat every gate as mandatory.
 
@@ -215,7 +217,7 @@ recommended contract rather than from oral tradition. You can see them at work i
 
 This process does not guarantee an interesting result — one of my own projects
 produced a technically solid, valid paper with some novel findings that simply
-was not very exciting. But the process keeps me honest, keeps the agent
+was not very exciting. The process keeps me honest, keeps the agent
 disagreeing, keeps quality high, and keeps the dead ends cheap.
 
 This is my current snapshot, not a finished system; my practice and the templates
