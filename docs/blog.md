@@ -2,227 +2,173 @@
 
 *By Philip Quirke (Martian)*
 
-**TL;DR:** Agents have given me a genuine level-up. This past quarter, working
-with agents, I roughly tripled my research throughput — and the quality went up,
-not down. This is how I did it. The reusable templates are in
-[this repo](https://github.com/withmartian/thor).
+*Over the past quarter, agents have roughly tripled my research throughput.
+As far as I can tell, the quality has gone up too. This is the process I currently use.
+The templates are available in the [thor repository](https://github.com/withmartian/thor).*
 
-## 1. The skill researchers should learn now
+Research is a harder setting for agents than software engineering. In software, the target
+is often reasonably clear and there is usually some kind of test for whether you have reached it.
+My research does not work like that. I normally begin with an area, a direction and a few clues.
+The destination is unknown. My starting hypothesis is also quite likely to be wrong.
 
-How do I best use AI agents as research assistants to do *great* research — not
-over one clever prompt, but across a messy, multi-week exploration? This is a
-practitioner's guide to what I have learned.
+This changes the main risk. A bad piece of code is usually exposed eventually. A bad research
+hypothesis can survive for weeks, especially when both the researcher and the agent want it to
+be true. There is no oracle telling you whether today’s work brought you closer to an important
+result or sent you further down a dead end.
 
-Each month, as the models get more capable and I get better at directing them,
-the benefits increase. I do not want to do research without them again.
+I spent a fair amount of time learning this the painful way. The process I now use is called **thor**,
+short for Towards Human-Oracle Research. The name is slightly grander than the thing itself. In practice,
+thor is a collection of Markdown files and working habits for keeping a research project honest over many weeks.
 
-Research is a harder place to use agents than software engineering. In software,
-the goal is usually clear and you can write a test for "done." My kind of
-research has no such test. I start with an area, a direction, and a few clues —
-but the destination is unknown, and the best I have is a starting hypothesis that
-is probably wrong. There is no oracle to tell me whether today moved me closer
-to a breakthough.
+The most important habit is to make it normal for the agent to disagree with me.
 
-The central danger, then, is not bad code. It is over-belief in a hypothesis —
-mine or the agent's — that goes unchallenged for weeks. To manage that, I need a
-process that does three things:
+## Positive disagreement
 
-- maximizes progress and minimizes time lost down dead ends;
-- keeps agents from hallucinating, or simply agreeing with me to be pleasant;
-- limits the damage from my own blind spots and wrong priors.
+Agents are inclined to agree with the person directing them. This is not always full-blown sycophancy.
+Often it is just a mild tendency to accept the framing they were given and keep going. In research, that
+is enough to waste a lot of time. If I suggest the wrong explanation, an agreeable agent can spend days
+producing competent work in support of it.
 
-This was a painful curve to climb. To help you avoid that pain, I have written my
-practice up as a small, reusable framework called **thor** — Towards
-Human-Oracle Research. The name is about treating the agent as a real
-collaborator: we bring different strengths, these strengths will shift over time, and good
-working habits should and can be built in now. Neither of us is an oracle alone — but
-humans and agents working well together get closer to the truth than either could
-on their own.
+People do this as well. A junior researcher or developer may assume that the more experienced person has
+noticed something they have not. They suppress their own better instinct and build exactly what was requested.
+A good manager has to make disagreement safe and useful. The same is true with agents.
 
-The most interesting part, and the part specific to research, is how I
-deliberately keep the agent *disagreeing* with me for weeks.
+I use a few devices to do this.
 
-## 2. Positive disagreement
+First, the human and the agent keep separate belief files: [human conjectures](https://github.com/withmartian/thor/templates/thor-conjectures-human.md) and
+[agent conjectures](https://github.com/withmartian/thor/templates/thor-conjectures-agent.md). I own the first.
+The agent owns the second and updates it as results arrive. The files are often inconsistent with one another.
+That is fine. Their purpose is to show what each of us actually thinks, rather than produce an artificial consensus.
 
-Agents default to being agreeable. It is less than sycophancy, but it is a bias
-toward agreeing with what I propose. An agent that will not push back will
-happily spend days, and many tokens, chasing a path I suggested. As my idea may
-be wrong, that can be costly.
+The expectation of disagreement also appears in the [agent contract](https://github.com/withmartian/thor/templates/thor-agent.md),
+which every agent reads when it starts. The instruction is quite blunt: the human’s conjectures are likely to be
+incomplete or wrong. Do not quietly adopt them. Push back and propose alternatives.
 
-I have seen the same thing in people. A junior developer who wants to please me,
-who assumes my experience gives me God-like insight (it does not), and who
-therefore buries their own better instinct and builds exactly what I asked for.
-Good managers fixes that failure mode via team culture.
-thor fixes it in agents using process and culture.
+Experiments are then chosen partly for how well they distinguish between competing explanations. I would usually
+rather run one experiment that could prove either of us wrong than three experiments that add weak support to the
+idea we already favour.
 
-I want **positive disagreement** from agents. My process for this has a few
-moving parts:
+Before anything runs, the agent writes a [study document](https://github.com/withmartian/thor/templates/thor-study-template.md).
+It says what will be tested and what would count as success, failure, ambiguity or an invalid experiment.
+If the experiment concerns competing conjectures, both are described neutrally. The point is to make these decisions
+before seeing the result.
 
-- **Two separate belief files.**
-  [Human conjectures](https://github.com/withmartian/thor/templates/thor-conjectures-human.md) and
-  [agent conjectures](https://github.com/withmartian/thor/templates/thor-conjectures-agent.md) live in different
-  files with different owners. I own mine; the agent owns its own and updates it
-  as experiment results land. They are allowed to disagree, and usually do.
-- **Disagreement written into the contract.** Every agent reads
-  [`thor-agent.md`](https://github.com/withmartian/thor/templates/thor-agent.md) on startup, and its standing
-  instruction is blunt: do not silently agree with the human's conjectures; they
-  are expected to be incomplete or wrong; push back and propose alternatives.
-- **Experiments that settle bets.** The agent is asked to pick a next
-  experiment, with a bias toward ones that *discriminate between competing
-  conjectures* — mine and the agent's — rather than pile confirmation on whoever
-  spoke first.
-- **Pre-registered, neutral study plans.** Each experiment gets a
-  [study document](https://github.com/withmartian/thor/templates/thor-study-template.md) stating what will run and
-  what would count as success, failure, ambiguity, or invalidity — before the
-  run. It can name the competing conjectures, but it must state them neutrally,
-  not as advocacy for a particular result.
-- **A skeptic reviews the plan before launch.** A fresh agent — ideally a
-  different model or vendor — rehydrates *only* from the documents, not from the
-  working thread's memory, and attacks the design.
-- **A skeptic reviews the results.** After the experiment runs, another fresh
-  thread checks whether the verdict is over-claimed or the prediction scoring was
-  too generous.
-- **Only then** do the results fold back into the conjecture files and re-rank
-  the "next steps" agenda.
+A fresh agent then reviews the plan. Ideally I use a different model or vendor. It reads the project documents but
+does not inherit the working thread or see the conjecture files, and its job is to find problems with the design.
+After the experiment, another fresh review checks whether we have overclaimed the result or scored our predictions
+too generously. Only after that do the findings go back into the conjecture files and change the ranked agenda.
 
-Of everything in thor, these **skeptic gates** have given me the single biggest
-lift in quality. They are cheap insurance against turning a broken experiment
-into a belief. In some cases they stop a proposed experiment from being run at
-all — and the cheapest save is the experiment that never runs.
+These skeptic reviews have probably produced the largest improvement in quality. Sometimes they catch an interpretation
+that is too convenient. Sometimes they find that an experiment cannot answer the question it was meant to answer, so I
+do not run it. That is the cheapest possible result.
 
-If I suspect the agent is still being too agreeable, or I am frustrated with
-progress, I prompt it: *"Ignore my hypothesis. Think deeply. What do you think
-the model is actually doing? Add any new ideas to your conjectures."*
+When the whole process still feels too agreeable, I sometimes give the agent a more direct prompt:
 
-## 3. The boring part that makes it work: write it down
+> Ignore my hypothesis. Think deeply. What do you think the model is actually doing? Add any new ideas to your conjectures.
 
-An agent's working memory is wiped on every crash, compaction, vendor swap, and
-reboot — and mine is degraded every time I context-switch to another thread. So
-the durable state of the project lives in version-controlled Markdown files.
+It is a simple intervention, but surprisingly useful.
 
-This is not glamorous, and it is the thing that makes the rest possible. The
-documents survive agent crashes, tool upgrades, a change of vendor, a laptop
-reboot, a collaborator joining by cloning the repo, and the sheer length of a
-weeks-long project.
+## Write everything down
 
-Because all state is in the documents, thor is agent- and model-agnostic. I have
-run it with Claude, ChatGPT, and OpenCode. That is also what makes the
-cross-vendor skeptic work: a fresh agent on a *different* model, attacking the
-first one's interpretation, raises my confidence in a way a same-model reviewer
-cannot — it does not share the same blind spots.
+An agent loses its working memory after a crash, a compaction, a vendor change or a new thread. My own memory is not much
+better after I have switched between several projects. The durable state of the research therefore lives in version-controlled
+Markdown files.
 
-## 4. The documents
+This is the boring part of thor, but a reason it works. The documents survive laptop reboots and tool changes. A human collaborator
+can clone the repository and see the same project the agent sees. A new model can pick up the work without relying on a long,
+half-remembered conversation.
 
-thor is a handful of Markdown files, each with one job and one owner. The two
-conjecture files and the pre-registered study docs above are the heart of it. The
-rest hold the project together:
+It also makes the method model-agnostic. I have used versions of it with Claude, ChatGPT and OpenCode. It also makes cross-model
+criticism easy. A reviewer from another model family may have different blind spots from the agent that ran the experiment.
+That does not make the review independent in any strict sense, but it is better than asking the original thread to inspect
+its own reasoning.
 
-- **The contract** ([`thor-agent.md`](https://github.com/withmartian/thor/templates/thor-agent.md)) is the entry
-  point. Every session starts the same way — "read `thor-agent.md`" — and that
-  one ritual, rehydration, works only because the project state lives in the docs
-  and not the session. It is also where the push-back culture lives.
-- **A ranked agenda** ([`thor-next-steps.md`](https://github.com/withmartian/thor/templates/thor-next-steps.md)):
-  what to do next, re-ranked after every result.
-- **The results trio:** a compact current-story summary, an append-only
-  chronological ledger of what ran, and a claim-to-evidence map
-  ([results-summary](https://github.com/withmartian/thor/templates/thor-results-summary.md),
-  [results-by-time](https://github.com/withmartian/thor/templates/thor-results-by-time.md),
-  [claim-evidence](https://github.com/withmartian/thor/templates/thor-claim-evidence.md)). These are strictly
-  empirical — no conjecture allowed. Keeping observed evidence and speculative
-  belief in separate files is a guardrail against biasing results.
-- **One glossary** ([`thor-glossary.md`](https://github.com/withmartian/thor/templates/thor-glossary.md)). Agents
-  invent their own compact terms in a project, partly for token efficiency, and
-  over weeks those meanings drift. A single project-wide glossary forces terms to
-  be defined once and used consistently everywhere.
+## What is in the project
 
-The full role and update rules for each document live in
-[`thor-document-rules.md`](https://github.com/withmartian/thor/templates/thor-document-rules.md); I will not
-repeat them here.
+Thor uses a small set of files. Each has one job and, where it matters, one owner.
 
-## 5. Be a manager: assistant, not scientist
+The [agent contract](https://github.com/withmartian/thor/templates/thor-agent.md) is the entry point.
+Every session begins with the same instruction: read `thor-agent.md`.
+It explains how to reconstruct the state of the project and sets the expectation that the agent should challenge me.
 
-The single most useful stance I have found is this: **be a manager.** Agents
-cannot yet run research unguided. They are research assistants, not research
-scientists. But they are fast and cheap and they know a lot.
+The two conjecture files hold our current beliefs.
+They are deliberately separate from the empirical record.
+I do not want a plausible explanation to slide into a results summary and gradually become treated as an observation.
 
-(In one month I let agents self-direct, and the results were uninspiring. They
-went down rabbit holes — 50% clarity in one experiment, then 20%, then 10%, then 1% —
-chasing a fading signal long after I would have given up.)
+The [ranked agenda](https://github.com/withmartian/thor/templates/thor-next-steps.md) says what should happen next.
+It is updated after new evidence arrives. Individual experiments have their own pre-registered study documents.
 
-Agents are genuinely useful as semi-independent assistants, but they still need a
-human in the loop. They get tunnel vision. They need occasional, deliberate
-guidance to step back.
+Results are split across three files. The [results summary](https://github.com/withmartian/thor/templates/thor-results-summary.md)
+gives the current story in compact form. The [chronological ledger](https://github.com/withmartian/thor/templates/thor-results-by-time.md)
+records what actually ran and is append-only. The [claim-to-evidence map](https://github.com/withmartian/thor/templates/thor-claim-evidence.md)
+shows which result supports which claim. These files are empirical. Conjectures belong elsewhere.
 
-They also lack research taste. To my eye the agents are very knowledgeable junior
-assistants — strong on things I am weak on, and yet sometimes surprisingly blank
-on something I assumed was obvious. When that happens, I write the missing prior
-into my conjecture file and restart the agent.
+There is also one shared [glossary](https://github.com/withmartian/thor/templates/thor-glossary.md). Agents invent
+compact terms as a project develops, partly because compact language saves tokens. The meaning of those terms can
+drift over several weeks. A project-wide glossary keeps everyone using the same vocabulary.
 
-I review what the agent changes before it is committed. Trust, but verify. The
-documents are how I manage at a distance: they let me set direction, see what the
-agent believes, and catch a wrong turn without watching every step. My control
-surface is the Markdown diff, not the code line-by-line — I use "push to git" as
-the review point, and I pay more attention to `thor-*.md` changes than to
-individual study notes.
+The detailed ownership and update rules are in [`thor-document-rules.md`](https://github.com/withmartian/thor/templates/thor-document-rules.md).
+They are dull enough that I will not reproduce them here, but explicit rules are vital when the same files are being
+edited by many agents across many sessions.
 
-My day-to-day "speed limit" is not compute or the number of agents — it is how
-many threads I can hold in my head. I usually run two at once, occasionally up to
-five. More threads than I can review actually *lowers* quality. The goal is not
-to maximize the number of threads; it is to maximize knowledge gained per day.
+## You still have to manage the research
 
-## 6. What it costs
+I once let agents direct themselves for roughly a month. The results were not very good. They would find a signal
+with 50% clarity, follow it to 20%, then 10%, then 1%, continuing down the same rabbit hole long after I would have stopped.
 
-thor is not free, and it is not perfect. The framework makes desired behaviors specific:
+This experience changed how I think about the division of labour. Current agents can be very capable research assistants.
+They are fast, inexpensive and knowledgeable about things I am weak on. They can also develop tunnel vision, and occasionally
+they are blank on something I had assumed was obvious. When that happens, I write the missing prior into my conjecture file
+and restart the agent.
 
-- **The skeptic can be sycophantic.** A reviewer that just says "great
-  experiment" adds nothing. The skeptic prompt is explicitly adversarial —
-  *find why this is wrong or over-claimed* — ideally on a different vendor whose
-  failure modes don't match the worker's.
-- **Pre-registration can be gamed.** An agent can loosen the
-  success criteria after peeking at results. The git history of the study doc is
-  the defense: the criteria should provably pre-date the run.
-- **Append-only isn't automatic.** Agents can "tidy" the chronological
-  ledger and quietly rewrite history. We state the append-only rule
-  explicitly so we always keep all historic results.
-- **Avoid growing rehydration cost.** A fresh agent does not read the ever-lengthening ledger.
-  The compact results and claims summary is what keeps rehydration cheap. These compact files
-  sometimes need manual *pruning*.
-- **The human is the bottleneck, by design.** Throughput is capped by my
-  context-switching, not by compute or agent count. That is a feature: it is what
-  keeps quality high.
+Research taste still has to come from somewhere. For my projects, it mostly comes from the human choosing the direction,
+noticing when a result is uninteresting, and deciding when a fading line of inquiry has had enough chances.
 
-The cost is a dial, not a fixed tax. Skeptic gates and extra agents cost
-tokens; right now my process is, if anything, a little over-strict. When that
-happens, dial the gate frequency down rather than treat every gate as mandatory.
+I review the agent’s changes before they are committed. I do not inspect every line of code, but I pay close attention to
+the Markdown diff, especially changes to the `thor-*.md` files. That is where beliefs, claims and priorities move.
+The diff is my main control surface.
 
-The upside is that the same discipline pays a dividend at the end. The
-claim-to-evidence map plus the time-ordered ledger are most of a paper's methods
-and results sections already — the audit trail is a deliverable, not just
-hygiene. And onboarding a collaborator, human or fresh agent, is a `git clone`
-and one instruction: read the contract.
+The limit on my throughput is usually the number of research threads I can understand well enough to review.
+I tend to run two at once and have occasionally managed five. Beyond that, adding agents reduces quality.
+The relevant quantity is knowledge gained per day, rather than agents or tokens spent per day.
 
-## 7. It travels
+## Where it fails
 
-There is early evidence that this approach generalizes beyond me. I have used the
-thor assets on four of my own projects — one of them a larger, multi-topic effort
-with five separate internal threads, each with its own thor agent — and two
-researcher friends have found the approach useful on entirely different problems.
-On an older project I re-ran with thor, two agents produced 35 experiments in
-three days.
+Thor adds process, but the process can also fail.
 
-I have pulled the documents into a small, project-agnostic set of
-[templates](https://github.com/withmartian/thor/templates), explicit enough that a new project starts from the
-recommended contract rather than from oral tradition. You can see them at work in
-[four real projects](https://github.com/withmartian/thor/EXAMPLES.md).
+A skeptic agent may be just as agreeable as the original one. A review that says "great experiment" and offers a few cosmetic
+suggestions is low value. The reviewer needs a narrow, adversarial instruction: find why this design is wrong, or why this
+conclusion is overclaimed. Using another vendor helps when the models have different failure modes.
 
-This process does not guarantee an interesting result — one of my own projects
-produced a technically solid, valid paper with some novel findings that simply
-was not very exciting. The process keeps me honest, keeps the agent
-disagreeing, keeps quality high, and keeps the dead ends cheap.
+Pre-registration does not enforce itself either. An agent may quietly loosen a success criterion after seeing the data.
+Git history provides a useful defence because it shows whether the study plan predates the run.
 
-This is my current snapshot, not a finished system; my practice and the templates
-keep improving. If you try them, I would like to hear what broke.
+The append-only ledger has a similarly fragile name. Agents like to tidy documents. Unless told otherwise, they may rewrite
+an old entry and accidentally improve the history. The rule has to be (and is) explicit.
 
----
+There is also a cost to rehydration. The chronological record grows indefinitely, so a fresh agent should not read all of it.
+It reads the compact results summary and claim map. Those files can occasionally need a human to prune them.
 
-**Get the templates:** [github.com/withmartian/thor](https://github.com/withmartian/thor)
+Finally, the human remains a bottleneck. This is intentional up to a point. The bottleneck is what stops five plausible but
+wrong threads from racing ahead unnoticed. Still, skeptic reviews and extra agents cost tokens and time. My current setup is
+probably a little too strict. I treat the frequency of the gates as a dial and reduce it when the risk is low.
+
+The paperwork pays for itself near the end of a project. The claim-to-evidence map and chronological record already contain
+much of what is needed for a paper’s methods and results sections. They also make it much easier to audit where a result came
+from six weeks later.
+
+## Does it generalise?
+
+The evidence is still limited. I have used the thor files on four of my own projects, including a larger project with five internal
+threads with a separate thor agent for each. Two researcher friends have also found the approach useful on quite different problems.
+When I revisited one older project, two agents completed 35 experiments in three days.
+
+I have turned the documents into a small set of [project templates](https://github.com/withmartian/thor/templates). There are also
+[four real examples](https://github.com/withmartian/thor/EXAMPLES.md), which may be more informative than the abstract rules.
+
+None of this process guarantees an interesting paper. One of my projects produced sound experiments and some novel findings, but the
+result simply was not very exciting. A process can keep the evidence clean and the dead ends cheap. It cannot make the world yield
+a profound answer.
+
+This is a snapshot of how I work now. The process is changing as the models change and as I become better at managing them.
+If you try it, I would be especially interested to hear what breaks.
