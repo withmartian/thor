@@ -14,10 +14,10 @@ config — exceeding it is a doc bug.
 
 ## Ranked queue
 
-| Priority | Status | Next step | Information it would produce | Which belief it updates | Done when |
-| --- | --- | --- | --- | --- | --- |
-| 1 | Ready | `<the experiment>` | `<what we'd learn>` | `<Cxx / Axx>` | `<criterion>` |
-| 2 | Blocked | `<the experiment>` | `<what we'd learn>` | `<Cxx / Axx>` | `<criterion>` |
+| Priority | Status · last changed | Next step | Information it would produce | End goal it advances | Which belief it updates | Cloud cost estimate | P(success) | Done when |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Ready · `<YYYY-MM-DD>` | `<the experiment>` | `<what we'd learn>` | `<goal>` | `<Cxx / Axx>` | `<$range or unknown>` | `<range or unknown>` | `<criterion>` |
+| 2 | Blocked · `<YYYY-MM-DD>` | `<the experiment>` | `<what we'd learn>` | `<goal>` | `<Cxx / Axx>` | `<$range or unknown>` | `<range or unknown>` | `<criterion>` |
 
 ## Frozen lines
 

@@ -8,6 +8,8 @@ Important: in the pre-run sections, state competing hypotheses or reads
 neutrally. Do not write the plan as advocacy for the hypothesis you hope it
 supports. This guards against steering the experiment toward a desired answer.
 
+Status: `<current state>` · last changed `<YYYY-MM-DD>`
+
 ## Executive summary
 
 *Omit this section until the study has results. Write it during result
@@ -26,7 +28,7 @@ honest about the finding.>`
 ## Pre-run (write before the experiment)
 
 - **Question**: `<the specific empirical question>`
-- **Motivation**: `<why this matters now>`
+- **Motivation**: `<why this matters now, and the end goal it advances>`
 - **Hypothesis / competing reads**: `<the live beliefs this result can distinguish, phrased neutrally>`
 - **Design**: `<data, intervention, controls, metrics, sample sizes, scope.
   State the minimal effect of interest and whether the sample sizes can detect
@@ -39,6 +41,9 @@ honest about the finding.>`
   A negative verdict requires a passing positive control and detectable-effect
   sample sizes>`
 - **Ambiguous / invalid condition**: `<what would make the run inconclusive or void>`
+- **Cost estimate**: `<estimated cloud cost in dollars to complete the study, or unknown>`
+- **Probability of success**: `<estimated chance of a positive or negative finding that guides
+  the next steps, or unknown>`
 - **Skeptic review (pre-launch)**: `<separate-thread skeptic audit of this plan —
   findings and their resolution, before launch>`
 - **Decision impact**: `<what each outcome would change in the docs>`

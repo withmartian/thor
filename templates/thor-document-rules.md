@@ -203,6 +203,11 @@ Rules:
 - Keep high-level synthesis in the results summary and detailed empirical synthesis in results synthesis.
 - Prefer decisive discriminators over incremental cleanup.
 - After each meaningful result, rerank this file rather than appending a historical note.
+- Each entry states why it is next, the end goal it advances, its estimated cloud cost in dollars
+  and probability of success (`unknown` if not estimable), and its status with the date of its last
+  real status change. Success is a positive or negative finding that guides the next steps. For a
+  blocked entry, estimate as if the blocker clears. Once its study note exists, keep the estimates
+  there and link to it.
 
 ## Study Notes
 
@@ -213,11 +218,13 @@ A study note should exist before any non-trivial experiment runs. It is both a p
 Required pre-run sections:
 
 - **Question**: the specific empirical question.
-- **Motivation**: why this question matters now.
+- **Motivation**: why this question matters now, and the end goal it advances.
 - **Hypothesis / Competing Reads**: what live beliefs the result can distinguish, written neutrally rather than as advocacy.
 - **Design**: model, data, intervention, controls, metrics, sample sizes, and scope. State the minimal effect of interest and whether the stated sample sizes can detect it; if they cannot, say so before the run.
 - **Positive Control**: a known-positive manipulation included in the assay that demonstrates the metric can move under this harness.
 - **Success / Failure / Ambiguous Conditions**: what result would count as positive, negative, inconclusive, or invalid before seeing the data.
+- **Cost Estimate**: estimated cloud cost in dollars to complete the study, or `unknown`.
+- **Probability Of Success**: estimated chance the study yields a positive or negative finding that guides the next steps, or `unknown`.
 - **Skeptic Review (pre-launch)**: the pre-launch skeptic-gate findings and their resolution. Written before launch.
 - **Decision Impact**: what each outcome would change in results summary, results synthesis, claim-evidence map, conjectures, or agenda.
 - **Risks And Confounds**: likely failure modes, missing controls, implementation risks, and interpretation traps.
@@ -238,6 +245,7 @@ Required post-run sections:
 Study-note rules:
 
 - Write the pre-run sections before launching the experiment.
+- Keep a `Status:` line under the title: the study's current state and the date of its last real status change.
 - Create new study notes in the topic-specific study-note path from the agent contract.
 - Do not move the goalposts after seeing results; if criteria change, add an explicit amendment with timing.
 - Prefer `positive`, `negative`, `ambiguous`, `underpowered`, and `invalid` over vague `success`.
