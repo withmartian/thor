@@ -246,6 +246,10 @@ Study-note rules:
 
 - Write the pre-run sections before launching the experiment.
 - Keep a `Status:` line under the title: the study's current state and the date of its last real status change.
+  When the study completes, add its outcome and its cloud cost (`~$` if estimated), e.g.
+  `Status: complete · underpowered (unreviewed) · ~$1.21 · last changed 2026-10-26`. Outcomes are
+  `positive`, `negative`, `mixed`, `ambiguous`, `underpowered`, `invalid`, `incomplete`, or `delivered`
+  for a non-experiment output; add `(unreviewed)` until the post-result gate passes.
 - Create new study notes in the topic-specific study-note path from the agent contract.
 - Do not move the goalposts after seeing results; if criteria change, add an explicit amendment with timing.
 - Prefer `positive`, `negative`, `ambiguous`, `underpowered`, and `invalid` over vague `success`.

@@ -10,6 +10,8 @@ supports. This guards against steering the experiment toward a desired answer.
 
 Status: `<current state>` · last changed `<YYYY-MM-DD>`
 
+*On completion:* `Status: complete · <outcome> · ~$<cloud cost> · last changed <YYYY-MM-DD>`
+
 ## Executive summary
 
 *Omit this section until the study has results. Write it during result
