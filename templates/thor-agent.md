@@ -20,6 +20,7 @@ topics and un-renamed.
 | Agenda entry cap | `<n active entries, e.g. 8>` |
 | Skeptic model | `<any model in a separate thread; different model/vendor encouraged, not required>` |
 | Compute / infra | `<platform, e.g. local, cloud VM, cluster>` |
+| Cloud resource labels | `<labels your organization requires on every VM the project creates, e.g. owner, project, environment, data classification>` |
 | Artifact store | `<where result bundles live>` |
 | Results summary | `<topic>-results-summary.md` |
 | Results synthesis | `<topic>-results-synthesis.md` |
