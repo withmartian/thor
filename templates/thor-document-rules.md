@@ -77,9 +77,27 @@ Prediction scoring belongs in the study note as part of the empirical record. It
 - `question failure` means the question was ill-posed or unanswerable as stated.
 - `instrument failure` means the assay class, unit of intervention, metric, data, or harness was the limiting factor. It triggers the outside-view sweep defined in the agent contract.
 
+## Proportionate Process
+
+Process exists to make results trustworthy. A step that protects no result is removed. A project that
+prefers speed says so in its agent contract, and that preference governs older, stricter wording.
+
+- **Match gates to stakes.** Exploratory work runs at the project's lowest cost tier, without gates,
+  and may guide the next run. Rerun at a gated tier only when a result is worth claiming.
+- **Each gate is one review.** Inside an approved budget, add no separate receiving reviews,
+  acknowledgements, finance acceptances or admission records.
+- **Bound runs by cost and the cloud stop, not by internal clocks.** Missing a self-set time window
+  is not a reason to refuse.
+- **Fix and continue.** A refusal from the team's own bookkeeping or guards is a defect to repair
+  within the same budget, not a new approval round. Only a budget breach, a failed control the
+  verdict depends on, or a safety guardrail stops a run.
+- **Size a run to settle its question.** Prefer one decisive run to several narrow ones.
+- **Record what rebuilding the result needs.** Do not keep readiness, dispatch or accounting receipts
+  as separate records.
+
 ## Skeptic Gates
 
-Role: independent adversarial review at two pre-registered points in every non-trivial experiment.
+Role: independent adversarial review at up to two pre-registered points in each gated experiment. The agent contract's cost tiers say which gates a run needs.
 
 Rules:
 
@@ -376,3 +394,4 @@ Drift smells:
 - Do not duplicate long document-purpose sections across docs; link to this file.
 - Do not create method-specific top-level synthesis docs unless results synthesis has become too large to serve as the primary synthesis.
 - Do not create a glossary per topic; there is exactly one `thor-glossary.md` per project.
+- Do not add approval steps, receipts or deadlines that protect no result. Ceremony that delays work without making a result more trustworthy is a process failure.
