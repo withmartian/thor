@@ -9,7 +9,8 @@ interpretation, organised by question rather than by chronology.
 
 This is an **empirical doc**. Record what the evidence shows and where it is
 weak. Do not argue for or against a conjecture here — that belongs in the
-conjecture files.
+conjecture files. Update under the active contract's review policy and the
+[router-doc update order](thor-document-rules.md#router-doc-update-order).
 
 In a multi-topic project, name it `<topic>-results-synthesis.md`.
 
@@ -17,10 +18,10 @@ Current primary synthesis: `<one line naming the theme this doc covers>`
 
 ## Current Read
 
-`<The best current understanding of this theme, in a few paragraphs. Lead with
-what changed most recently and what it did to the story. State negatives as
-plainly as positives — a result that killed a clean hypothesis is usually the
-most valuable paragraph on the page.>`
+`<State the best current understanding of this theme in a few paragraphs. Lead
+with the strongest decision-relevant evidence, not merely the latest run.
+Explain material changes to the story. State supported negatives as plainly as
+positives, with the scope and caveats that qualify them>`
 
 ## `<Empirical question 1>`
 
@@ -46,7 +47,7 @@ enough evidence to need its own caveats.>`
 `<Keep only figures that change interpretation or priority. A figure that is
 merely recorded belongs with its study note or in the artifact store.>`
 
-![`<takeaway-style caption>`](`<path>`)
+`<Embed the selected figure here with a takeaway-style caption and a valid relative path>`
 
 ## Open And Ambiguous
 

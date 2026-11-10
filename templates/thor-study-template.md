@@ -1,31 +1,40 @@
 # Study: <name> (thor-study-<name>.md)
 
-One per experiment. Write the **pre-run** sections BEFORE launching. This is a
-pre-registration-lite plan and the final record. In a multi-topic project, name
-it `<topic>-study-<name>.md`.
+Read role and rules: [Study Notes](thor-document-rules.md#study-notes).
 
-Important: in the pre-run sections, state competing hypotheses or reads
-neutrally. Do not write the plan as advocacy for the hypothesis you hope it
-supports. This guards against steering the experiment toward a desired answer.
+Status: pre-launch · last changed `<YYYY-MM-DD>`
 
-Status: `<current state>` · last changed `<YYYY-MM-DD>`
+Tier: gated · review policy: [Experiment Tiers](thor-agent.md#experiment-tiers)
 
-*On completion:* `Status: complete · <outcome> · ~$<cloud cost> · last changed <YYYY-MM-DD>`
+Use this full form for a gated study. Use a shorter record only where the active
+agent contract defines one; choose the form before results. Complete pre-run
+sections before implementation or launch, with required pre-launch review resolved
+before execution. State competing reads neutrally rather than advocating for a
+preferred answer.
+
+Copy to the study path in the active contract and name it `<topic>-study-<name>.md`.
+For `docs/study-<topic>/`, change links to shared docs to `../thor-document-rules.md`
+and the review-policy link to `../<topic>-agent.md#experiment-tiers` (or its canonical
+project-wide location). Adjust again for deeper folders, then remove these setup instructions.
+
+On completion, use:
+`Status: complete · <outcome> (unreviewed) · ~$<cloud cost> · last changed <YYYY-MM-DD>`.
+Remove `(unreviewed)` after required post-result review passes. A review exemption
+is `not required` with a policy reference, never a claimed review pass.
 
 ## Executive summary
 
-*Omit this section until the study has results. Write it during result
-recording, then refresh it after the post-result skeptic gate passes so it
-states the reviewed verdict. Aimed at a skim reader: a few sentences, takeaway
-not method. A null study can be one line — "Study failed to produce any
-interesting results." Full rules:
+*Before results, omit this section or state `Awaiting results`. During result
+recording, write a few sentences stating the finding, scope and key caveat; mark
+them `unreviewed` while required review is pending, then refresh after review.
+State nulls and inadequate sensitivity explicitly rather than judging whether a
+result is interesting. Full rules:
 [Executive Summary](thor-document-rules.md#executive-summary).*
 
 `<what this study found, and the caveat a skim reader needs>`
 
 `<optional: one plot carrying the main result, with a caption that states the
-takeaway rather than the axes. Omit for null results or when no single plot is
-honest about the finding.>`
+takeaway rather than the axes. Omit when no single plot honestly conveys the finding>`
 
 ## Pre-run (write before the experiment)
 
@@ -35,9 +44,9 @@ honest about the finding.>`
 - **Design**: `<data, intervention, controls, metrics, sample sizes, scope.
   State the minimal effect of interest and whether the sample sizes can detect
   it; if they cannot, say so before the run>`
-- **Positive control**: `<a known-positive manipulation proving the metric can
-  move under this harness. A flat result whose positive control also fails is
-  invalid/underpowered, never negative>`
+- **Positive control**: `<name the known-positive manipulation, pass criterion
+  and check/output that will establish whether the metric can move. A flat
+  result with a failed control is invalid/underpowered, never negative>`
 - **Success condition**: `<result that counts as positive — defined now>`
 - **Failure condition**: `<result that counts as negative — defined now.
   A negative verdict requires a passing positive control and detectable-effect
@@ -46,8 +55,9 @@ honest about the finding.>`
 - **Cost estimate**: `<estimated cloud cost in dollars to complete the study, or unknown>`
 - **Probability of success**: `<estimated chance of a positive or negative finding that guides
   the next steps, or unknown>`
-- **Skeptic review (pre-launch)**: `<separate-thread skeptic audit of this plan —
-  findings and their resolution, before launch>`
+- **Skeptic review (pre-launch)**: `<reviewer/context, reviewed source references,
+  findings and resolution before launch; link the actual review. Keep pending
+  until reviewed, or state not required with the policy reference>`
 - **Decision impact**: `<what each outcome would change in the docs>`
 - **Risks / confounds**: `<likely failure modes, missing controls>`
 - **Expected artifacts**: `<files, plots, logs, and where they will land>`
@@ -55,18 +65,21 @@ honest about the finding.>`
 ## Post-run (fill in after the experiment)
 
 - **Executive summary**: `<written at the top of this note, not here — see the
-  section above. Refresh it after the post-result skeptic gate passes>`
-- **Run record**: `<command, environment, dates, artifact paths, commit/hash>`
-- **Results**: `<key quantitative and qualitative results>`
+  section above. Refresh it after required post-result review>`
+- **Run record**: `<command, environment, dates, artifact paths, source revision/hash;
+  account for completed, failed, incomplete and missing runs>`
+- **Results**: `<key quantitative and qualitative results, including observed
+  control outcomes and links to the outputs supporting the verdict>`
 - **Interpretation**: `<read against the pre-stated success/failure/ambiguous
   conditions — do NOT move the goalposts; add an explicit amendment if criteria
   must change>`
 - **Prediction scoring**: `<score each standing conjecture-file prediction this
   result bears on: confirmed / refuted / untouched. Say so explicitly if none
   apply. This records evidence; it does not update conjectures by itself>`
-- **Skeptic review (post-result)**: `<separate-thread skeptic audit of the
-  interpretation, verdict, and prediction scoring — findings and resolution,
-  before conjectures update and the agenda reranks>`
+- **Skeptic review (post-result)**: `<reviewer/context, reviewed source references,
+  findings and resolution for interpretation, verdict and prediction scoring;
+  link the actual review. State not required only with the policy reference>`
 - **Limitations**: `<what this does not show>`
-- **Doc updates**: `<which docs were updated or intentionally left unchanged>`
+- **Doc updates**: `<affected docs in the canonical update order, after required
+  review; human-owned conjecture revisions are proposals to the owner>`
 - **Next read**: `<frozen / reopen / replicate / different assay?>`

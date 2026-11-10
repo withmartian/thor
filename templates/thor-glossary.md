@@ -10,14 +10,9 @@ efficiency; without a shared glossary those meanings drift. Define recurring
 terms here, and use glossary terms consistently in code, study notes, plots, and
 artifacts across every topic.
 
-Rules:
-
-- Define terms that recur, affect interpretation, or appear in artifacts.
-- Define process terms that affect verdicts, phase order, or document updates.
-- Prefer stable definitions over chronology or planning.
-- Do not create near-synonyms; if a synonym is unavoidable, alias it to the canonical term.
-- In reader-facing docs, link glossary terms on first important use.
-- Multi-topic projects share this one file.
+Follow [Terminology Discipline](thor-document-rules.md#terminology-discipline).
+Keep definitions here and operating requirements in the agent contract or
+Document Rules, so the glossary does not become a second policy manual.
 
 ## Process Terms
 
@@ -59,19 +54,53 @@ A freeze classification where the question was ill-posed, unanswerable as stated
 
 ### `skeptic gate`
 
-An independent adversarial review in a separate thread. The pre-launch gate audits the study plan before execution. The post-result gate audits interpretation, verdict, and prediction scoring before conjecture updates or agenda reranking.
+An adversarial review in a separate agent context, using declared docs and artifacts
+rather than the working session's conversation. The pre-launch gate audits the plan;
+the post-result gate audits interpretation, verdict and prediction scoring. Gate
+applicability comes from the active agent contract; review mechanics live in
+[Skeptic Gates](thor-document-rules.md#skeptic-gates).
 
 ### `streak`
 
-A repeated pattern in prediction scoring, such as several consecutive `refuted` or `untouched` predictions. A stale streak is a signal to revisit the conjecture frame after the post-result skeptic gate.
+A repeated pattern in prediction scoring, such as several consecutive `refuted`
+or `untouched` predictions, that may indicate a stale conjecture frame. Belief
+updates follow the active contract's review policy.
 
 ### `study`
 
-One planned experiment or audit with a study note. A study contains pre-run sections, amendments, run record, results, interpretation, prediction scoring, skeptic reviews, limitations, doc updates, and next read.
+One planned experiment or research audit and its record. Its tier determines the
+record's form and required reviews; see [Study Notes](thor-document-rules.md#study-notes).
+An exploratory run can use the lighter record defined in the agent contract.
 
 ### `thread`
 
-A separate agent conversation or execution context. Thor uses separate threads for the working phase and skeptic phases so in-memory context cannot bleed across planning, review, interpretation, and document updates.
+A research topic with its own scope, contract, agenda and evidence docs, as listed
+in the project's thread registry. A topic may have several workstreams and agent
+sessions; the topic name does not establish ownership of another agent's work.
+
+### `agent session`
+
+One agent conversation or execution context. A skeptic needs a separate review
+context from the working session; changing roles within one conversation does
+not isolate its context.
+
+### `workstream`
+
+An owned unit of work within a topic, with identified files, resources and source
+state. Several workstreams can share a topic without sharing edit or resource
+ownership.
+
+### `tier`
+
+A pre-run classification specifying cost/resource limits, required records,
+reviews and permitted result uses. The active agent contract is authoritative;
+the portable defaults distinguish exploratory runs from gated studies.
+
+### `unreviewed`
+
+A result or interpretation that has not passed post-result skeptic review.
+Permitted uses depend on the tier policy. It is a review state, not a confidence
+level or a substitute for reporting the measured result plainly.
 
 ## Project Terms
 

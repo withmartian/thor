@@ -22,7 +22,8 @@ agent's — for weeks. So thor keeps the human and the agent as peers who are
 *expected* to disagree: neither is an oracle alone, but working well together
 they get closer to the truth than either could. It records
 both sets of beliefs in separate files, biases experiments toward ones that
-settle the difference, and runs a fresh **skeptic** over every plan and result.
+settle the difference, and runs a fresh **skeptic** at the gates required by the
+project's experiment policy.
 Writing everything down is the substrate that makes this work.
 
 > **New here?** Read the [long-form write-up](docs/blog.md) — *doing great
@@ -48,11 +49,12 @@ OpenCode.
   between competing conjectures rather than confirm whoever spoke first.
 - **Write it down.** All durable state lives in the Markdown docs, so it survives
   crashes, vendor swaps, reboots, and a collaborator joining by `git clone`.
-- **Skeptic gates.** Every non-trivial experiment is reviewed at two
-  pre-registered gates — before launch (is the plan sound?) and after results (is
-  the verdict over-claimed?) — by a skeptic in a *separate thread* that rehydrates
-  only from the docs. The single biggest lift in quality; the cheapest save is the
-  experiment that never runs.
+- **Skeptic gates.** Gated studies get two reviews by default — before launch
+  (is the plan sound?) and after results (is the verdict over-claimed?) — in a
+  *separate context* that rehydrates from docs and artifacts. Configured low-cost
+  exploration can guide the next run without gates; rerun at a gated tier before
+  a claim or other evidence-bearing decision rests on it. Projects define their
+  own limits and explicit overrides in the agent contract.
 - **Be a manager.** Agents are fast, cheap, knowledgeable research *assistants* —
   not scientists. They lack research taste and get tunnel vision. Set direction,
   review the Markdown diff, and keep a human in the loop.
@@ -74,7 +76,6 @@ instead of scattering among ad-hoc docs.
 | [thor-results-synthesis.md](templates/thor-results-synthesis.md) | Mid-level empirical synthesis, organised by question | coordinated topic doc |
 | [thor-results-by-time.md](templates/thor-results-by-time.md) | Append-only chronological results ledger | coordinated topic doc |
 | [thor-claim-evidence.md](templates/thor-claim-evidence.md) | Durable claims and their supporting evidence | coordinated topic doc |
-| [thor-study-template.md](templates/thor-study-template.md) | One per experiment; pre-registered plan + record | coordinated topic doc |
 
 ### Project-wide docs (always `thor-`, one per project)
 
@@ -82,6 +83,7 @@ instead of scattering among ad-hoc docs.
 | --- | --- | --- |
 | [thor-document-rules.md](templates/thor-document-rules.md) | What each doc is for and how to update it | human |
 | [thor-glossary.md](templates/thor-glossary.md) | Single canonical vocabulary (anti-drift) | project-wide shared across topics |
+| [thor-study-template.md](templates/thor-study-template.md) | Shared master for per-study plans and records | human; copy into the active topic's study folder |
 
 ### Naming convention
 
@@ -94,27 +96,59 @@ naming rule:
 - **Multi-topic project:** copy the *per-topic* docs once per thread and replace
   `thor` with the thread's name (`maths-agent.md`, `maths-conjectures-human.md`,
   …; `paper-agent.md`, …). The **project-wide** docs are *not* copied — keep
-  exactly one `thor-document-rules.md` and one `thor-glossary.md`, still
-  `thor-`-prefixed, shared across every thread.
+  one `thor-document-rules.md`, one `thor-glossary.md` and one
+  `thor-study-template.md`, still `thor-`-prefixed, shared across every thread.
 
 So a project with a `maths` research thread and a `paper` write-up thread carries
-a full set of `maths-*` docs, a full set of `paper-*` docs, and a single shared
-`thor-document-rules.md` + `thor-glossary.md`. (A project's first/primary thread
-may just keep the `thor-` prefix instead of picking a name.)
+a set of `maths-*` docs, the applicable `paper-*` docs, and the shared rules,
+glossary and study template. A publication-only topic needs its own workflow,
+not an experimental doc set merely to fill the template. Keep `thor-agent.md`
+as the repo-wide router and thread registry; topic contracts link to its shared
+tier policy and add their own scope, config and explicit exceptions.
 
 ## Start a new project
 
 1. Copy the [`templates/`](templates/) folder into your project (e.g. as `docs/`).
-2. Fill in `thor-agent.md` first: goal, scope, ownership, autonomy limits.
+2. Fill in `docs/thor-agent.md` first: goal, scope, ownership, resource limits and
+   [experiment tiers](templates/thor-agent.md#experiment-tiers). Set a per-run
+   exploratory budget to enable ungated pilots; otherwise non-trivial experiments
+   use the default full study note and two reviews. Routine docs and deterministic
+   software checks that make no research claim need neither.
 3. Seed `thor-conjectures-human.md` with your real starting beliefs (expect them
    to be wrong).
 4. List a few first experiments in `thor-next-steps.md`.
-5. Start an agent with: *"Read `thor-agent.md`. Proceed per the contract."*
+5. Install the harness entrypoint below, then start an agent with:
+   *"Read `docs/thor-agent.md`. Proceed per the contract."*
 
 For a multi-topic project, repeat steps 2–4 per thread (replacing `thor` with the
-thread name on the per-topic docs), keep a single shared `thor-document-rules.md`
-and `thor-glossary.md`, and start each agent by naming its thread: *"You are the
-`maths` thread. Read `maths-agent.md`. Proceed per the contract."*
+thread name on the per-topic docs). Replace references to per-topic docs as well
+as filenames; retain shared `thor-` references. Fill the registry in the repo-wide
+router, and start each agent with its topic assignment: *"You are working on
+`maths`. Read `docs/thor-agent.md`, then `docs/maths-agent.md`."*
+
+Copy study notes into `docs/study-<topic>/` (use `study-thor/` for a single-topic
+project). Adjust their shared-doc links to `../thor-document-rules.md`, and point
+the tier-policy link at the canonical agent contract. Deeper folders need another
+`../`. Check links after copying or renaming; the template's sibling links work
+in `templates/`, not automatically in every destination.
+
+### Connect the harness entrypoint
+
+For harnesses that read `AGENTS.md`, put this short pointer in the repository root.
+
+```markdown
+Read `docs/thor-agent.md` first and follow its Rehydration steps for this task.
+For multi-topic work, read the assigned topic's contract from its thread registry.
+```
+
+Keep the operating rules in their canonical docs rather than copying them into
+each harness entrypoint. Check the harness's actual context-loading behavior;
+a linked Markdown file is not automatically loaded just because it exists.
+
+In a fresh session, ask the agent to identify its entry contract, applicable tier
+policy and task-specific next reads without changing files. Check the loaded
+context or read-tool trace, not only its assertion that it read the rules. Repeat
+after a harness change or a broken rehydration route.
 
 Optionally, mark the project as a thor project so a collaborator — or you, six
 weeks later — can see which practice the docs belong to. Paste this into your own
@@ -145,24 +179,25 @@ README:
 8. **Verified negatives.** Every assay carries a positive control and an honest
    power statement; a flat result only counts as negative if the harness
    demonstrably could have detected the effect.
-9. **Scored predictions.** Conjecture-file predictions are scored
-   confirmed/refuted/untouched in the study note after every study. This records
-   evidence; conjecture files update only after the post-result skeptic gate.
+9. **Scored predictions.** Score relevant predictions confirmed/refuted/untouched
+   in the study record. Empirical belief updates follow the applicable review
+   policy; agents update their own conjectures and propose human-file revisions
+   to the owner.
 10. **Depth budgets and the outside view.** A line that runs past its depth budget
-    without updating a conjecture freezes by default, every freeze classifies
-    itself (question answered / question failure / instrument failure), and each
-    freeze triggers a literature sweep for isomorphic problems — so the project
-    re-reads the world, not only itself.
-11. **Skeptic gates.** Every non-trivial experiment is reviewed at two
-    pre-registered gates — before launch and after results — by a skeptic running
-    in a *separate thread* that rehydrates only from the docs. It can't
-    rubber-stamp from shared context, and forcing it to work from the docs
-    continuously tests whether the docs are self-sufficient. A different model or
-    vendor is encouraged, not required.
-12. **Thread isolation.** Planning, pre-launch skepticism, execution, post-result
-    skepticism, and router-doc updates are separate phases. Later phases must
-    rehydrate from version-controlled docs and artifacts, not from unrecorded
-    in-memory context.
+    without updating a conjecture pauses by default unless the next study records
+    a justification. A freeze follows the evidence/review rules and classifies
+    itself (question answered / question failure / instrument failure). Instrument
+    failure requires a literature sweep for isomorphic problems before the next
+    experiment — so the project re-reads the world, not only itself.
+11. **Skeptic gates.** Select the experiment tier before launch and run its required
+    reviews in a separate context. A self-check is not a skeptic gate. Record the
+    actual review and resolutions in the study note. A different model or vendor
+    is encouraged, not required. Gate requirements and exploratory exceptions
+    live in the agent contract.
+12. **Context isolation.** Planning, review, execution, result recording and
+    router-doc updates are distinct phases. Reviewers rehydrate from declared docs
+    and artifacts, not the working session's conversation. A research *thread* is
+    a topic; an *agent session* is a context; a *workstream* is an owned unit of work.
 
 > Adapt freely. The templates serve the work, not the other way around.
 

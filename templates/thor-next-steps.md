@@ -1,10 +1,16 @@
 # Next Steps (thor-next-steps.md)
 
-Ranked, current-facing agenda. This records what to do next, not the history of
-what was done. Re-rank after each meaningful result instead of appending notes.
-Delete completed entries (their trail lives in the study note and results
-ledger) and stay within the agenda entry cap from the agent contract's project
-config — exceeding it is a doc bug.
+Read role and rules: [Experiment Agenda](thor-document-rules.md#experiment-agenda).
+
+Rank the next experiments and keep this file current-facing. Rerank after
+meaningful results under the active contract's review policy; exploratory results
+may guide the next run with their `exploratory / unreviewed` label and record link.
+Move completed trails to the study note or ledger, then delete the completed
+entries here. Keep the queue within the configured agenda cap.
+
+Estimate cost and probability of a decision-useful result here until a study note
+exists, then link to its estimates rather than maintaining two copies. Use
+`unknown` for an unestimable value; estimate blocked work assuming its blocker clears.
 
 ## Ranking logic
 
@@ -21,11 +27,12 @@ config — exceeding it is a doc bug.
 
 ## Frozen lines
 
-Each freeze carries a classification (`question answered` / `question failure` /
-`instrument failure`) and an explicit reopen condition. An `instrument failure`
-freeze triggers the outside-view sweep from the agent contract.
+For each freeze, link its supporting study/review, classify it as `question answered`,
+`question failure` or `instrument failure`, and state a reopen condition. Apply
+the active contract's review requirements; an exploratory result alone does not
+support a freeze. An `instrument failure` freeze triggers the outside-view sweep.
 
-- `<line>` — `<classification>`: `<one-line read>`. Reopen only `<condition>`.
+- `<line>` — `<classification>`: `<one-line read; study/review link>`. Reopen only `<condition>`.
 
 ## Deliberately paused
 
